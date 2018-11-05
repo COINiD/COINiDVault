@@ -1,0 +1,1 @@
+Securely stores your private keys. Signs transactions in local or offline mode.

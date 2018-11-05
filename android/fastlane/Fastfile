@@ -1,0 +1,48 @@
+default_platform(:android)
+
+platform :android do
+
+  lane :beta do |options|
+    if !options[:time]
+      puts("Missing options...")
+      next
+    end
+
+    bump_version_code
+
+    rootDir = "..";
+    shRootDir = "../.."; #sh cwd is android/fastlane
+    buildDir = "builds/vault";
+
+    FileUtils.mkdir_p("#{shRootDir}/#{buildDir}/latest") unless File.directory?("#{shRootDir}/#{buildDir}/latest")
+    FileUtils.mkdir_p("#{shRootDir}/#{buildDir}/#{options[:time]}") unless File.directory?("#{shRootDir}/#{buildDir}/#{options[:time]}")
+
+    gradle(task: "clean assembleRelease")
+
+    FileUtils.mv("#{shRootDir}/android/app/build/outputs/apk/release/app-release.apk", "#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk")
+    FileUtils.cp("#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk", "#{shRootDir}/#{buildDir}/#{options[:time]}/#{options[:time]}-coinid-vault.apk")
+
+    #upload_to_play_store(
+    #  apk: "#{rootDir}/#{buildDir}/latest/latest-coinid-vault.apk"
+    #)
+#
+    #slack(
+    #  message: "Ny Vault på väg till Google Play!",
+    #  default_payloads: [],
+    #  slack_url: 'https://hooks.slack.com/services/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'
+    #)
+  end
+
+  lane :bump_version_code do
+    path = '../app/build.gradle'
+    re = /versionCode\s+(\d+)/ 
+
+    s = File.read(path)
+    versionCode = s[re, 1].to_i
+    s[re, 1] = (versionCode + 1).to_s
+
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+end
