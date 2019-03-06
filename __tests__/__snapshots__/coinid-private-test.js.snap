@@ -1,0 +1,2599 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bitcoin COINiDPrivate PUB generates correct return data 1`] = `"49-*0-*0-$xpub6CkbGcMGuz8YPkzfL9r3MrGjazWJYL8rFXKafGTdkFmeMHyLidvaFgWGvkwDTy9ze429K8AiEEoukhyJMw5AvwzwiBH9gjGEk636cnKKKGT"`;
+
+exports[`bitcoin COINiDPrivate PUB generates correct return data 2`] = `"44-*0-*0-$xpub6DP26N4oFK3btF9VGJmG4Dbco1hAu7hwg4TaMvdB3i7FptjZMJYad1iAEi6YTsE9au5CwoLXUwsurDoXeQS9TV6iLES7w74VCei4RpUsf44"`;
+
+exports[`bitcoin COINiDPrivate PUB generates correct return data 3`] = `"84-*0-*0-$xpub6BwV1bP9VZZzMFPpzBx8vcC8QvQdbVjLarcgQxX68Bj5oVTThfecDm9LPQwxzjMqTrie53pmLP2Yaag8H7H5GzsqBJVZxEKZg4sPgAHzRQR"`;
+
+exports[`bitcoin COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/0'/0'",
+  ],
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "BTC",
+  "type": "pub",
+}
+`;
+
+exports[`bitcoin COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/0'/0'",
+  ],
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "BTC",
+  "type": "pub",
+}
+`;
+
+exports[`bitcoin COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/0'/0'",
+  ],
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "BTC",
+  "type": "pub",
+}
+`;
+
+exports[`bitcoin COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`bitcoin COINiDPrivate SAH generates correct return data 2`] = `"coinid-btc://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`bitcoin COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/0'/0'/1/1",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "type": "sah",
+}
+`;
+
+exports[`bitcoin COINiDPrivate SWP generates correct return data 1`] = `"P2SH-P2WPKH*3CZrwqWma9hnDiC3sS1eDuA4wJuUtbmQ9f*1+P2PKH*1HfeuDqRZtEtrCoU57svi9NzogYtEe3VvG*1+P2WPKH*bc1qkmghf6a4guw5yj4cp0d6xarlg5k67y7tut62w8*1"`;
+
+exports[`bitcoin COINiDPrivate SWP generates correct return data 2`] = `"coinid-btc://SWP/P2SH-P2WPKH*3CZrwqWma9hnDiC3sS1eDuA4wJuUtbmQ9f*1+P2PKH*1HfeuDqRZtEtrCoU57svi9NzogYtEe3VvG*1+P2WPKH*bc1qkmghf6a4guw5yj4cp0d6xarlg5k67y7tut62w8*1"`;
+
+exports[`bitcoin COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "type": "swp",
+}
+`;
+
+exports[`bitcoin COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "3CZrwqWma9hnDiC3sS1eDuA4wJuUtbmQ9f",
+      "type": "P2SH-P2WPKH",
+    },
+    Object {
+      "address": "1HfeuDqRZtEtrCoU57svi9NzogYtEe3VvG",
+      "type": "P2PKH",
+    },
+    Object {
+      "address": "bc1qkmghf6a4guw5yj4cp0d6xarlg5k67y7tut62w8",
+      "type": "P2WPKH",
+    },
+  ],
+  "compressed": true,
+  "decryptedWif": "KzqJS7fj8LQuvuydtpxUD4BTKwb3BnzQUWtM1vk4pKfJVGogq2b3",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`bitcoin COINiDPrivate SWPTX generates correct return data 1`] = `"0100000000010156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD0100000017160014B6D174EBB5471D424AB80BDBA3747F452DAF13CBFFFFFFFF01B8410F000000000017A914A5B0E07FB61346E58E0AA143F4E103DC505793B2870247304402206F8412DD5D7CB1494FE1D0A75B1BF82793563761D91BCA74F2267A4142672EC80220564EC981617C26795A6581E6849992EBC9AEBD827EAA385C81DB28D39AE12CB20121028EDFBACA39BD77E100721B521FD87D3111640F069418AEBBA6FE6DC7112EE7DD00000000"`;
+
+exports[`bitcoin COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-btc://SWPTX/0100000000010156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD0100000017160014B6D174EBB5471D424AB80BDBA3747F452DAF13CBFFFFFFFF01B8410F000000000017A914A5B0E07FB61346E58E0AA143F4E103DC505793B2870247304402206F8412DD5D7CB1494FE1D0A75B1BF82793563761D91BCA74F2267A4142672EC80220564EC981617C26795A6581E6849992EBC9AEBD827EAA385C81DB28D39AE12CB20121028EDFBACA39BD77E100721B521FD87D3111640F069418AEBBA6FE6DC7112EE7DD00000000"`;
+
+exports[`bitcoin COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2SH-P2WPKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "outputInfo": Object {
+    "address": "3Go7JpcBu7XdYa93EUfvTD4hFbECWRr1Ew",
+    "derivationPath": "m/49'/0'/0'/0/5",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "type": "swptx",
+}
+`;
+
+exports[`bitcoin COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2SH-P2WPKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "3Go7JpcBu7XdYa93EUfvTD4hFbECWRr1Ew",
+  "receiveDerivationPath": "m/49'/0'/0'/0/5",
+  "total": 1000000,
+}
+`;
+
+exports[`bitcoin COINiDPrivate TX generates correct return data 1`] = `"01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600146A238081E804BB0E48EC782BBF692A7E4D283D9300000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000171600142B9E46C08C2AE35BD22AFD5D2F9C40BCA4C99CE00000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF77362870247304402201C3253F5F64232A64F33FF36861FCB910D5C62A2C1DB89B80025D2EEF71A5D8D0220273FC6D74BE88B5BFDC9D840B9F3F710E17FBCE86E836C15D016AD3296CCCFF2012103E0E694A6DC947AA79B7758A0FC25EB71B14CE1275B84D9EC22449C5C0CEDAB1902473044022032C26F213BF72A8BC366CE77C011D9A0CCF43CF710969A6AF3AD9C2FA63453EA022024E8F027E6F593D5E3A1437D1ED0496F9672A5BEAEA0A9E88CBCE03FCE5B752F012103368A7B7CF24663D3E8C1311E681D946F9BB9EFAE982FEC96D91F708547E2725D00000000"`;
+
+exports[`bitcoin COINiDPrivate TX generates correct return data 2`] = `"coinid-btc://TX/01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600146A238081E804BB0E48EC782BBF692A7E4D283D9300000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000171600142B9E46C08C2AE35BD22AFD5D2F9C40BCA4C99CE00000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF77362870247304402201C3253F5F64232A64F33FF36861FCB910D5C62A2C1DB89B80025D2EEF71A5D8D0220273FC6D74BE88B5BFDC9D840B9F3F710E17FBCE86E836C15D016AD3296CCCFF2012103E0E694A6DC947AA79B7758A0FC25EB71B14CE1275B84D9EC22449C5C0CEDAB1902473044022032C26F213BF72A8BC366CE77C011D9A0CCF43CF710969A6AF3AD9C2FA63453EA022024E8F027E6F593D5E3A1437D1ED0496F9672A5BEAEA0A9E88CBCE03FCE5B752F012103368A7B7CF24663D3E8C1311E681D946F9BB9EFAE982FEC96D91F708547E2725D00000000"`;
+
+exports[`bitcoin COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    4,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/0'/0'/0/5",
+    "m/49'/0'/0'/1/2",
+  ],
+  "inputValueArr": Array [
+    369796,
+    430000,
+  ],
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "txHex": "0100000002A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C020000000000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000000000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF773628700000000",
+  "type": "tx",
+}
+`;
+
+exports[`bitcoin COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 799796,
+  "allOutputTotal": 799592,
+  "allOutputs": Array [
+    Object {
+      "address": "3H4cAZ7qPd4HcgSQzad9oX4AbSVxs9hMS5",
+      "amount": 200000,
+    },
+    Object {
+      "address": "1CXFxAnFzeCa61ChFB7iHnFe2NekG74YZE",
+      "amount": 430000,
+    },
+    Object {
+      "address": "bc1q0e3904gfenwky062kv6pdut6gjs2taauu4hum2",
+      "amount": 10000,
+    },
+    Object {
+      "address": "3AcsPXgpehJ1y8zQfzU93yTF1gdDiYJHU6",
+      "amount": 30000,
+    },
+    Object {
+      "address": "3LP5QGb3oeb2jJNEecGKy8mLrLXsN9EVEV",
+      "amount": 129592,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "3LP5QGb3oeb2jJNEecGKy8mLrLXsN9EVEV",
+      "amount": 129592,
+    },
+  ],
+  "changeTotal": 129592,
+  "externalOutputs": Array [
+    Object {
+      "address": "3H4cAZ7qPd4HcgSQzad9oX4AbSVxs9hMS5",
+      "amount": 200000,
+    },
+    Object {
+      "address": "1CXFxAnFzeCa61ChFB7iHnFe2NekG74YZE",
+      "amount": 430000,
+    },
+    Object {
+      "address": "bc1q0e3904gfenwky062kv6pdut6gjs2taauu4hum2",
+      "amount": 10000,
+    },
+    Object {
+      "address": "3AcsPXgpehJ1y8zQfzU93yTF1gdDiYJHU6",
+      "amount": 30000,
+    },
+  ],
+  "externalTotal": 670000,
+  "fee": 204,
+}
+`;
+
+exports[`bitcoin COINiDPrivate VAL generates correct return data 1`] = `"31uZbEJCc3aA73Th94P1fTFcsb3UwKXKtX"`;
+
+exports[`bitcoin COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/0'/0'/0/2",
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "type": "val",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate PUB generates correct return data 1`] = `"49-*17-*0-$xpub6C2to84hFLdu4JMxvaoaSiJ1r9buS5Y7nXQGPSuRRYPWX1ATTwB4zdvZq9XeS3C1Bkv1EJp3zQpW7hLN7N2ZjU2cbD1bHMP1NQ2HaAaFo4S"`;
+
+exports[`groestlcoin COINiDPrivate PUB generates correct return data 2`] = `"44-*17-*0-$xpub6DBEGvvZFPMwFakEFPZ9Xf3MPvVXiBgHrGZrJMwRSoAtKWhUyMSHQsrRYvdftodqdENyoiVXPE9Y2insgH823cXu7sPbLPvVv822VA9nR1Y"`;
+
+exports[`groestlcoin COINiDPrivate PUB generates correct return data 3`] = `"84-*17-*0-$xpub6CDFmeMKBS8snYzUYhYPVgnto3oJgw5DthZhA1q8ABfnFLgXAaFqLFtUphLrYmdsajWVJGZ91puqADSc9nxcj9D9RLTTmNNqbEVJJhNbDNM"`;
+
+exports[`groestlcoin COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/17'/0'",
+  ],
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "GRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/17'/0'",
+  ],
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "GRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/17'/0'",
+  ],
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "",
+  "ticker": "GRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`groestlcoin COINiDPrivate SAH generates correct return data 2`] = `"coinid-grs://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`groestlcoin COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/17'/0'/1/1",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*17-*0-*0*3+3HMJUS",
+  "ticker": "GRS",
+  "type": "sah",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate SWP generates correct return data 1`] = `"P2PKH*FtS9MQRCk4XXJMXUX9C8nN4UScLcNAk22v*0"`;
+
+exports[`groestlcoin COINiDPrivate SWP generates correct return data 2`] = `"coinid-grs://SWP/P2PKH*FtS9MQRCk4XXJMXUX9C8nN4UScLcNAk22v*0"`;
+
+exports[`groestlcoin COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*17-*0-*0*3+3HMJUS",
+  "ticker": "GRS",
+  "type": "swp",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "FtS9MQRCk4XXJMXUX9C8nN4UScLcNAk22v",
+      "type": "P2PKH",
+    },
+  ],
+  "compressed": false,
+  "decryptedWif": "5KehPPuBBYK4kLSxpjVbL7N1VrDTshVn4iezXkwdnoBRQHtbfaw",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`groestlcoin COINiDPrivate SWPTX generates correct return data 1`] = `"010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008B483045022100BC8CB6998ABF18F8C168A1DECDEA11F2B20517C24F1BD67A51783E5E9B90DDC0022043FAF56C56C32CD539FC6EB1CE78CBEBAA504D26FE3762DA739DC1C2169834AB014104F28519581797D8CFDB897F328D34EA6B228C7CE942997436EA3F2DB2A9950B817B042954F63AF1B5A84F8D14D659A810D359EA3642460CF870BE2653B4763259FFFFFFFF01B8410F000000000017A914B066BA0457F02BE9C67E84BDBF3596E8A7A85F418700000000"`;
+
+exports[`groestlcoin COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-grs://SWPTX/010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008B483045022100BC8CB6998ABF18F8C168A1DECDEA11F2B20517C24F1BD67A51783E5E9B90DDC0022043FAF56C56C32CD539FC6EB1CE78CBEBAA504D26FE3762DA739DC1C2169834AB014104F28519581797D8CFDB897F328D34EA6B228C7CE942997436EA3F2DB2A9950B817B042954F63AF1B5A84F8D14D659A810D359EA3642460CF870BE2653B4763259FFFFFFFF01B8410F000000000017A914B066BA0457F02BE9C67E84BDBF3596E8A7A85F418700000000"`;
+
+exports[`groestlcoin COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "FtS9MQRCk4XXJMXUX9C8nN4UScLcNAk22v",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "outputInfo": Object {
+    "address": "3HmjusqAu6EtPPSpKW88w5tsjf2tx6236S",
+    "derivationPath": "m/49'/17'/0'/0/3",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*17-*0-*0*3+3HMJUS",
+  "ticker": "GRS",
+  "type": "swptx",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "FtS9MQRCk4XXJMXUX9C8nN4UScLcNAk22v",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "3HmjusqAu6EtPPSpKW88w5tsjf2tx6236S",
+  "receiveDerivationPath": "m/49'/17'/0'/0/3",
+  "total": 1000000,
+}
+`;
+
+exports[`groestlcoin COINiDPrivate TX generates correct return data 1`] = `"01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0200000017160014E881092F1C764E99EB266A2BF0C04A42599EE41D00000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0100000017160014BB3562F4A72F121C8566513910A74501C801EF860000000005400D03000000000017A914C50D589AE0965FBB3484D51AF1271A6BC2851E8987B08F0600000000001976A914EF20271534095EA2A69064620164F248997D64CB88AC1027000000000000160014EF20271534095EA2A69064620164F248997D64CB307500000000000017A914609796DC6E5DFFB0948A3D268ACE1FCFE2B4A96B8738FA01000000000017A914263482828E92FF4510191F10A3FA2CDBC1D04711870247304402205D6147768478B2BBDEB7CAC18C4DFB3D1D4707CC7F47B943F73CC82F711FABA0022031F99A3C511D8AEF151D42ABFF53C87E37D0096D8E0C5A9988B4B12B60C532CE01210346F8BFBF63E1D7B1CBC98BB73D539E65A1859C871931F1D6563F76418F85644B02483045022100E568A56B95AC20D1C87FCD857C657F501FDE93CC5724E951335FC3A613F055D5022020E46EBE02418D51709A7111A3E2605DE3A4E15E3F63224CABC8945AB411AB2001210228FC4FCF93F43235AAAB57358075A0C9B70443D8858B839E4CFEFF42EDCF3A2A00000000"`;
+
+exports[`groestlcoin COINiDPrivate TX generates correct return data 2`] = `"coinid-grs://TX/01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0200000017160014E881092F1C764E99EB266A2BF0C04A42599EE41D00000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0100000017160014BB3562F4A72F121C8566513910A74501C801EF860000000005400D03000000000017A914C50D589AE0965FBB3484D51AF1271A6BC2851E8987B08F0600000000001976A914EF20271534095EA2A69064620164F248997D64CB88AC1027000000000000160014EF20271534095EA2A69064620164F248997D64CB307500000000000017A914609796DC6E5DFFB0948A3D268ACE1FCFE2B4A96B8738FA01000000000017A914263482828E92FF4510191F10A3FA2CDBC1D04711870247304402205D6147768478B2BBDEB7CAC18C4DFB3D1D4707CC7F47B943F73CC82F711FABA0022031F99A3C511D8AEF151D42ABFF53C87E37D0096D8E0C5A9988B4B12B60C532CE01210346F8BFBF63E1D7B1CBC98BB73D539E65A1859C871931F1D6563F76418F85644B02483045022100E568A56B95AC20D1C87FCD857C657F501FDE93CC5724E951335FC3A613F055D5022020E46EBE02418D51709A7111A3E2605DE3A4E15E3F63224CABC8945AB411AB2001210228FC4FCF93F43235AAAB57358075A0C9B70443D8858B839E4CFEFF42EDCF3A2A00000000"`;
+
+exports[`groestlcoin COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    4,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/17'/0'/0/3",
+    "m/49'/17'/0'/1/1",
+  ],
+  "inputValueArr": Array [
+    369796,
+    430000,
+  ],
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*17-*0-*0*3+3HMJUS",
+  "ticker": "GRS",
+  "txHex": "0100000002A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C020000000000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000000000000005400D03000000000017A914C50D589AE0965FBB3484D51AF1271A6BC2851E8987B08F0600000000001976A914EF20271534095EA2A69064620164F248997D64CB88AC1027000000000000160014EF20271534095EA2A69064620164F248997D64CB307500000000000017A914609796DC6E5DFFB0948A3D268ACE1FCFE2B4A96B8738FA01000000000017A914263482828E92FF4510191F10A3FA2CDBC1D047118700000000",
+  "type": "tx",
+}
+`;
+
+exports[`groestlcoin COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 799796,
+  "allOutputTotal": 799592,
+  "allOutputs": Array [
+    Object {
+      "address": "3Kew2dzLeMDUMchRrVse1e1SVYW3odQM3w",
+      "amount": 200000,
+    },
+    Object {
+      "address": "Fry6TmG62wfuFP4JKhjuKNjKv8wmjiTVou",
+      "amount": 430000,
+    },
+    Object {
+      "address": "grs1qauszw9f5p9029f5sv33qze8jfzvh6extzjr2wm",
+      "amount": 10000,
+    },
+    Object {
+      "address": "3AVkPZwZ4XGKpKjboxgi6C4qqZGaMqqd4v",
+      "amount": 30000,
+    },
+    Object {
+      "address": "35B2WH77uY2y27X7gfdWBjh6VbjtZoumNE",
+      "amount": 129592,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "35B2WH77uY2y27X7gfdWBjh6VbjtZoumNE",
+      "amount": 129592,
+    },
+  ],
+  "changeTotal": 129592,
+  "externalOutputs": Array [
+    Object {
+      "address": "3Kew2dzLeMDUMchRrVse1e1SVYW3odQM3w",
+      "amount": 200000,
+    },
+    Object {
+      "address": "Fry6TmG62wfuFP4JKhjuKNjKv8wmjiTVou",
+      "amount": 430000,
+    },
+    Object {
+      "address": "grs1qauszw9f5p9029f5sv33qze8jfzvh6extzjr2wm",
+      "amount": 10000,
+    },
+    Object {
+      "address": "3AVkPZwZ4XGKpKjboxgi6C4qqZGaMqqd4v",
+      "amount": 30000,
+    },
+  ],
+  "externalTotal": 670000,
+  "fee": 204,
+}
+`;
+
+exports[`groestlcoin COINiDPrivate VAL generates correct return data 1`] = `"3LPCpJLLDd77kgNdm38t4tQqcCJoimAzAB"`;
+
+exports[`groestlcoin COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/17'/0'/0/2",
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*17-*0-*0*3+3HMJUS",
+  "ticker": "GRS",
+  "type": "val",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB generates correct return data 1`] = `"49-*1-*0-$tpubDDJYTZ5AfXWqpqguxVxCES2gszSiGbei96C5hcvecimptwhM6oTnQPFuiuCmBjAKVAamR1P9M4RD2rU74XrcfVy3Kbn8J5FgnLkSD8ZGWQh"`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB generates correct return data 2`] = `"44-*1-*0-$tpubDDebpBUs3pCHeXVsPgLHBBbPL76cwdEihX6Sdf5TFCheqK8j3WvDQs7SERyzhJXstJAGeryxipbR5BtsRXBy9GrrhJMYnYcxjFhU5nXZXb5"`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB generates correct return data 3`] = `"84-*1-*0-$tpubDDiKkNcbGp51ctUrNYrt32UQZSCS6QcZFUeAUPsYLHcUDWmPVir696ps7PoY8gfciEpsisHHyLtpF7P2y2sLF1gf3Rby3KzwHio1JW13h3u"`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "TGRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "TGRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "TGRS",
+  "type": "pub",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`groestlcoin-testnet COINiDPrivate SAH generates correct return data 2`] = `"coinid-tgrs://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`groestlcoin-testnet COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/1/1",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
+  "ticker": "TGRS",
+  "type": "sah",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWP generates correct return data 1`] = `"P2PKH*mnrYq7qJsD2hXgpbPLAmYAQebzyi68wqZ8*0"`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWP generates correct return data 2`] = `"coinid-tgrs://SWP/P2PKH*mnrYq7qJsD2hXgpbPLAmYAQebzyi68wqZ8*0"`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
+  "ticker": "TGRS",
+  "type": "swp",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "mnrYq7qJsD2hXgpbPLAmYAQebzyi68wqZ8",
+      "type": "P2PKH",
+    },
+  ],
+  "compressed": false,
+  "decryptedWif": "92y1U1qogasK3EqvPndXy3nCG3tFbvgsT9QyF7PVW1JbCjVeyQH",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWPTX generates correct return data 1`] = `"010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008A4730440220207DA5B74D078A36ED7D896183CB7C1FDCAEB455926B889FA077104C713278F9022005C469E8B52B80A647EA1F8D941BED290777A44010F878664C49CB4582A74CBE014104B3A11DD9CBC821E380DBE4E9FA48C1B5E780970D208B592DC3FAFBA56453BF65E47918A039F8406885E365B1EC1CFBAB4F66D46D75526DAFB6DAEFBBDA9987DBFFFFFFFF01B8410F000000000017A914B8A7EA488D894C7E57C52698D5D0EE97695F63F78700000000"`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-tgrs://SWPTX/010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008A4730440220207DA5B74D078A36ED7D896183CB7C1FDCAEB455926B889FA077104C713278F9022005C469E8B52B80A647EA1F8D941BED290777A44010F878664C49CB4582A74CBE014104B3A11DD9CBC821E380DBE4E9FA48C1B5E780970D208B592DC3FAFBA56453BF65E47918A039F8406885E365B1EC1CFBAB4F66D46D75526DAFB6DAEFBBDA9987DBFFFFFFFF01B8410F000000000017A914B8A7EA488D894C7E57C52698D5D0EE97695F63F78700000000"`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "mnrYq7qJsD2hXgpbPLAmYAQebzyi68wqZ8",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "outputInfo": Object {
+    "address": "2NA5bUXmS96csYzmVJJs828MJehYm2zgQBr",
+    "derivationPath": "m/49'/1'/0'/0/2",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
+  "ticker": "TGRS",
+  "type": "swptx",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "mnrYq7qJsD2hXgpbPLAmYAQebzyi68wqZ8",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "2NA5bUXmS96csYzmVJJs828MJehYm2zgQBr",
+  "receiveDerivationPath": "m/49'/1'/0'/0/2",
+  "total": 1000000,
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate TX generates correct return data 1`] = `"01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600149CC41CFED67454E3CA28C12CAD9AAAC9CD38F65100000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C010000001716001415E7F24BB26FAF3AAAE2A13B9691D567EB30FF640000000005400D03000000000017A914D7EF101DAA78E7656CA3C49B30B854E8C4D7A2BF87B08F0600000000001976A9147E8EB917EAB0DA74EE21769044B8E36562BF5D3288AC10270000000000001600147E8EB917EAB0DA74EE21769044B8E36562BF5D32307500000000000017A914E1BCEA2765A83B1D688CF113A93F78E2D119EA2A8738FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D0087024730440220793BB1EB7FF1899DE73959FEC6255770C749BD205601B771AC4F147558BF74ED02202FD06D3B042C3702D99C03642EAD920CB71DE7A3DD0BC18D5EB7E4F295B9E339012103DE94033563E65540E31866CB19BB8719279EA1CAD0301EE19D4F9F7F7034EF2602483045022100B4ABBA3E57DE274A6073333BA4436B0530C1C3A9E26C332CBDB696B15F5E48E0022070D6BEAB5F287E5550937B55E101C184110A2AB3D2098CEC84D7DA68F8698EBC012103BC68669A007AAD9D683918E7AFF193A1A6151013E86871A0B4A36F8D8032D37A00000000"`;
+
+exports[`groestlcoin-testnet COINiDPrivate TX generates correct return data 2`] = `"coinid-tgrs://TX/01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600149CC41CFED67454E3CA28C12CAD9AAAC9CD38F65100000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C010000001716001415E7F24BB26FAF3AAAE2A13B9691D567EB30FF640000000005400D03000000000017A914D7EF101DAA78E7656CA3C49B30B854E8C4D7A2BF87B08F0600000000001976A9147E8EB917EAB0DA74EE21769044B8E36562BF5D3288AC10270000000000001600147E8EB917EAB0DA74EE21769044B8E36562BF5D32307500000000000017A914E1BCEA2765A83B1D688CF113A93F78E2D119EA2A8738FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D0087024730440220793BB1EB7FF1899DE73959FEC6255770C749BD205601B771AC4F147558BF74ED02202FD06D3B042C3702D99C03642EAD920CB71DE7A3DD0BC18D5EB7E4F295B9E339012103DE94033563E65540E31866CB19BB8719279EA1CAD0301EE19D4F9F7F7034EF2602483045022100B4ABBA3E57DE274A6073333BA4436B0530C1C3A9E26C332CBDB696B15F5E48E0022070D6BEAB5F287E5550937B55E101C184110A2AB3D2098CEC84D7DA68F8698EBC012103BC68669A007AAD9D683918E7AFF193A1A6151013E86871A0B4A36F8D8032D37A00000000"`;
+
+exports[`groestlcoin-testnet COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    4,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/1'/0'/0/2",
+    "m/49'/1'/0'/1/1",
+  ],
+  "inputValueArr": Array [
+    369796,
+    430000,
+  ],
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
+  "ticker": "TGRS",
+  "txHex": "0100000002A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C020000000000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000000000000005400D03000000000017A914D7EF101DAA78E7656CA3C49B30B854E8C4D7A2BF87B08F0600000000001976A9147E8EB917EAB0DA74EE21769044B8E36562BF5D3288AC10270000000000001600147E8EB917EAB0DA74EE21769044B8E36562BF5D32307500000000000017A914E1BCEA2765A83B1D688CF113A93F78E2D119EA2A8738FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D008700000000",
+  "type": "tx",
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 799796,
+  "allOutputTotal": 799592,
+  "allOutputs": Array [
+    Object {
+      "address": "2NCvyeutPLBED5fVbPtydrvGX2dUjvaBvUP",
+      "amount": 200000,
+    },
+    Object {
+      "address": "ms48Qo1Kb8qQEb5A7UNSLf16pTmdsSWju1",
+      "amount": 430000,
+    },
+    Object {
+      "address": "tgrs1q068tj9l2krd8fm3pw6gyfw8rv43t7hfjcyczyg",
+      "amount": 10000,
+    },
+    Object {
+      "address": "2NDppLU2NbjiXiiPCoiLZ3n8taoSsU7xjc9",
+      "amount": 30000,
+    },
+    Object {
+      "address": "2MwVYYE5yeb4UqYcoGHRzWHnuPPqLEZXG4b",
+      "amount": 129592,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "2MwVYYE5yeb4UqYcoGHRzWHnuPPqLEZXG4b",
+      "amount": 129592,
+    },
+  ],
+  "changeTotal": 129592,
+  "externalOutputs": Array [
+    Object {
+      "address": "2NCvyeutPLBED5fVbPtydrvGX2dUjvaBvUP",
+      "amount": 200000,
+    },
+    Object {
+      "address": "ms48Qo1Kb8qQEb5A7UNSLf16pTmdsSWju1",
+      "amount": 430000,
+    },
+    Object {
+      "address": "tgrs1q068tj9l2krd8fm3pw6gyfw8rv43t7hfjcyczyg",
+      "amount": 10000,
+    },
+    Object {
+      "address": "2NDppLU2NbjiXiiPCoiLZ3n8taoSsU7xjc9",
+      "amount": 30000,
+    },
+  ],
+  "externalTotal": 670000,
+  "fee": 204,
+}
+`;
+
+exports[`groestlcoin-testnet COINiDPrivate VAL generates correct return data 1`] = `"2NA5bUXmS96csYzmVJJs828MJehYm2zgQBr"`;
+
+exports[`groestlcoin-testnet COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/0/2",
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
+  "ticker": "TGRS",
+  "type": "val",
+}
+`;
+
+exports[`myriad COINiDPrivate PUB generates correct return data 1`] = `"49-*90-*0-$xpub6CLcS66ooFPGSmHTjTJsMWHEQFX3gNgXuE8aQSxJtpo4BrjpVRqcx3s7uwvqnWDuirsT81c62gaAaWdY5oNSzCaNRxUbSyGpQ9SbQrNRtDu"`;
+
+exports[`myriad COINiDPrivate PUB generates correct return data 2`] = `"44-*90-*0-$xpub6CHoWiY52in9RiM2WXoeDajSrcUF9nGDbw3J2wijcodZqynKQFDWzhjNWWF4B5m2TGQyaY9xCVrUKit7nUyogK94WNfNA2DMSrJgAa4LSFb"`;
+
+exports[`myriad COINiDPrivate PUB generates correct return data 3`] = `"84-*90-*0-$xpub6D7Po26pEeV5EifhhxdfTmNnbTPjsHDj9LrYsWj9TJTM7HLaACT7xUjPTa3Gso1yTCpNMeHbTHJhuwmMRz4TNurcvcXZajb2MrQ9gvwQKUR"`;
+
+exports[`myriad COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/90'/0'",
+  ],
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "",
+  "ticker": "XMY",
+  "type": "pub",
+}
+`;
+
+exports[`myriad COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/90'/0'",
+  ],
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "",
+  "ticker": "XMY",
+  "type": "pub",
+}
+`;
+
+exports[`myriad COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/90'/0'",
+  ],
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "",
+  "ticker": "XMY",
+  "type": "pub",
+}
+`;
+
+exports[`myriad COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`myriad COINiDPrivate SAH generates correct return data 2`] = `"coinid-xmy://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`myriad COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/90'/0'/1/1",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "49-*90-*0-*0*2+4FY57D",
+  "ticker": "XMY",
+  "type": "sah",
+}
+`;
+
+exports[`myriad COINiDPrivate SWP generates correct return data 1`] = `"P2PKH*MJhP4bpwaqTS53ADmjAscnt6Jv8AXyVx93*0"`;
+
+exports[`myriad COINiDPrivate SWP generates correct return data 2`] = `"coinid-xmy://SWP/P2PKH*MJhP4bpwaqTS53ADmjAscnt6Jv8AXyVx93*0"`;
+
+exports[`myriad COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "49-*90-*0-*0*2+4FY57D",
+  "ticker": "XMY",
+  "type": "swp",
+}
+`;
+
+exports[`myriad COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "MJhP4bpwaqTS53ADmjAscnt6Jv8AXyVx93",
+      "type": "P2PKH",
+    },
+  ],
+  "compressed": false,
+  "decryptedWif": "6zMgHHh5aXYZwEFvAxeHYDzwK2ZA2ibLecsfeK6GBYGdiL1tVa2",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`myriad COINiDPrivate SWPTX generates correct return data 1`] = `"010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008B483045022100C4258649A880DEE27C4F7877654622ADE8B67630B965B41414233573649AD1BF022045E82B42AB0561A9367FB0FB259FC620E8A683D764AD7758D49DCC5B79FE89690141043E45A5BB3AD933EA0C8BE2A92B715B6633497D28F0732D28DA609FFD803E49504675365B0C6146E1842A34B44CB9137D7BFE3D33331F8CAE186E8157B5BA1EEFFFFFFFFF01B8410F000000000017A914201564F4F7355D54E8CBDD6A3BDF33E550A30A0F8700000000"`;
+
+exports[`myriad COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-xmy://SWPTX/010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008B483045022100C4258649A880DEE27C4F7877654622ADE8B67630B965B41414233573649AD1BF022045E82B42AB0561A9367FB0FB259FC620E8A683D764AD7758D49DCC5B79FE89690141043E45A5BB3AD933EA0C8BE2A92B715B6633497D28F0732D28DA609FFD803E49504675365B0C6146E1842A34B44CB9137D7BFE3D33331F8CAE186E8157B5BA1EEFFFFFFFFF01B8410F000000000017A914201564F4F7355D54E8CBDD6A3BDF33E550A30A0F8700000000"`;
+
+exports[`myriad COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "MV7AERJ7BA8nDuftiPoCNsYvGrB1V3koew",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "outputInfo": Object {
+    "address": "4fy57d6G6L16DDJgUXPLEy2GBJ3DwmFpTT",
+    "derivationPath": "m/49'/90'/0'/0/2",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*90-*0-*0*2+4FY57D",
+  "ticker": "XMY",
+  "type": "swptx",
+}
+`;
+
+exports[`myriad COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "MV7AERJ7BA8nDuftiPoCNsYvGrB1V3koew",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "4fy57d6G6L16DDJgUXPLEy2GBJ3DwmFpTT",
+  "receiveDerivationPath": "m/49'/90'/0'/0/2",
+  "total": 1000000,
+}
+`;
+
+exports[`myriad COINiDPrivate TX generates correct return data 1`] = `"010000000001010D4E4F1E87B9F1D14727A9472640F74F4A18BA448CB063ED3574D21FCF7467380000000017160014967645EB3841190E7661362EF90AF44EDDC2D3A10000000004400D0300000000001976A9149E9DCD04CF375691FDFA2D19A52AE404B9EF03DE88ACB08F06000000000017A914594F6D51146D61F84C7027A466069E47DE69712C871027000000000000160014293DBC2B6B7CED3D7F363496A4E00B332F209B94E9645E2C0100000017A914556AA879860E42C377B13639C27350469972A71B8702483045022100E9C6F92EA1EACC0594DCE48146451F9424BE1498FB433C03C4A1867D3B080E7E022025DD6E95AEF85E45CB0ACBB6A4BCC65B5BEE2022065F60D92A14785F02B460680121029AD93137AD0355DCF41E75DAECA5E2947A0125F3B20D6685F684D98FA92E77F200000000"`;
+
+exports[`myriad COINiDPrivate TX generates correct return data 2`] = `"coinid-xmy://TX/010000000001010D4E4F1E87B9F1D14727A9472640F74F4A18BA448CB063ED3574D21FCF7467380000000017160014967645EB3841190E7661362EF90AF44EDDC2D3A10000000004400D0300000000001976A9149E9DCD04CF375691FDFA2D19A52AE404B9EF03DE88ACB08F06000000000017A914594F6D51146D61F84C7027A466069E47DE69712C871027000000000000160014293DBC2B6B7CED3D7F363496A4E00B332F209B94E9645E2C0100000017A914556AA879860E42C377B13639C27350469972A71B8702483045022100E9C6F92EA1EACC0594DCE48146451F9424BE1498FB433C03C4A1867D3B080E7E022025DD6E95AEF85E45CB0ACBB6A4BCC65B5BEE2022065F60D92A14785F02B460680121029AD93137AD0355DCF41E75DAECA5E2947A0125F3B20D6685F684D98FA92E77F200000000"`;
+
+exports[`myriad COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    3,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/90'/0'/0/2",
+  ],
+  "inputValueArr": Array [
+    5039991221,
+  ],
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "49-*90-*0-*0*2+4FY57D",
+  "ticker": "XMY",
+  "txHex": "01000000010D4E4F1E87B9F1D14727A9472640F74F4A18BA448CB063ED3574D21FCF74673800000000000000000004400D0300000000001976A9149E9DCD04CF375691FDFA2D19A52AE404B9EF03DE88ACB08F06000000000017A914594F6D51146D61F84C7027A466069E47DE69712C871027000000000000160014293DBC2B6B7CED3D7F363496A4E00B332F209B94E9645E2C0100000017A914556AA879860E42C377B13639C27350469972A71B8700000000",
+  "type": "tx",
+}
+`;
+
+exports[`myriad COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 5039991221,
+  "allOutputTotal": 5039991017,
+  "allOutputs": Array [
+    Object {
+      "address": "MNMr2wBZNHXpqXJKfwqFzHxNhUNa3PFvPG",
+      "amount": 200000,
+    },
+    Object {
+      "address": "4mBf9jhXHGNP2PY22uoGo4FQL5dErYxcJr",
+      "amount": 430000,
+    },
+    Object {
+      "address": "my1q9y7mc2mt0nkn6lekxjt2fcqtxvhjpxu5thhhqj",
+      "amount": 10000,
+    },
+    Object {
+      "address": "4kq55239JRFoZ9T2ZtdznVHmctygYcUm9F",
+      "amount": 5039351017,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "4kq55239JRFoZ9T2ZtdznVHmctygYcUm9F",
+      "amount": 5039351017,
+    },
+  ],
+  "changeTotal": 5039351017,
+  "externalOutputs": Array [
+    Object {
+      "address": "MNMr2wBZNHXpqXJKfwqFzHxNhUNa3PFvPG",
+      "amount": 200000,
+    },
+    Object {
+      "address": "4mBf9jhXHGNP2PY22uoGo4FQL5dErYxcJr",
+      "amount": 430000,
+    },
+    Object {
+      "address": "my1q9y7mc2mt0nkn6lekxjt2fcqtxvhjpxu5thhhqj",
+      "amount": 10000,
+    },
+  ],
+  "externalTotal": 640000,
+  "fee": 204,
+}
+`;
+
+exports[`myriad COINiDPrivate VAL generates correct return data 1`] = `"4fy57d6G6L16DDJgUXPLEy2GBJ3DwmFpTT"`;
+
+exports[`myriad COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/90'/0'/0/2",
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "49-*90-*0-*0*2+4FY57D",
+  "ticker": "XMY",
+  "type": "val",
+}
+`;
+
+exports[`testnet COINiDPrivate PUB generates correct return data 1`] = `"49-*1-*0-$tpubDDJYTZ5AfXWqpqguxVxCES2gszSiGbei96C5hcvecimptwhM6oTnQPFuiuCmBjAKVAamR1P9M4RD2rU74XrcfVy3Kbn8J5FgnLkSD6gEPxD"`;
+
+exports[`testnet COINiDPrivate PUB generates correct return data 2`] = `"44-*1-*0-$tpubDDebpBUs3pCHeXVsPgLHBBbPL76cwdEihX6Sdf5TFCheqK8j3WvDQs7SERyzhJXstJAGeryxipbR5BtsRXBy9GrrhJMYnYcxjFhU5r5ANde"`;
+
+exports[`testnet COINiDPrivate PUB generates correct return data 3`] = `"84-*1-*0-$tpubDDiKkNcbGp51ctUrNYrt32UQZSCS6QcZFUeAUPsYLHcUDWmPVir696ps7PoY8gfciEpsisHHyLtpF7P2y2sLF1gf3Rby3KzwHio1JWctyV2"`;
+
+exports[`testnet COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "tBTC",
+  "type": "pub",
+}
+`;
+
+exports[`testnet COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "tBTC",
+  "type": "pub",
+}
+`;
+
+exports[`testnet COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/1'/0'",
+  ],
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "",
+  "ticker": "tBTC",
+  "type": "pub",
+}
+`;
+
+exports[`testnet COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`testnet COINiDPrivate SAH generates correct return data 2`] = `"coinid-tbtc://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`testnet COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/1/1",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*1*0+2MTRGW",
+  "ticker": "tBTC",
+  "type": "sah",
+}
+`;
+
+exports[`testnet COINiDPrivate SWP generates correct return data 1`] = `"P2SH-P2WPKH*2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy*1+P2PKH*mvsCywbc3ARm5difJJLyZUgNFZP9XoHVWg*1+P2WPKH*tb1q4p08w782h8qgpfdpye3d2uv8t0wq940su04k09*1"`;
+
+exports[`testnet COINiDPrivate SWP generates correct return data 2`] = `"coinid-tbtc://SWP/P2SH-P2WPKH*2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy*1+P2PKH*mvsCywbc3ARm5difJJLyZUgNFZP9XoHVWg*1+P2WPKH*tb1q4p08w782h8qgpfdpye3d2uv8t0wq940su04k09*1"`;
+
+exports[`testnet COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*1*0+2MTRGW",
+  "ticker": "tBTC",
+  "type": "swp",
+}
+`;
+
+exports[`testnet COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy",
+      "type": "P2SH-P2WPKH",
+    },
+    Object {
+      "address": "mvsCywbc3ARm5difJJLyZUgNFZP9XoHVWg",
+      "type": "P2PKH",
+    },
+    Object {
+      "address": "tb1q4p08w782h8qgpfdpye3d2uv8t0wq940su04k09",
+      "type": "P2WPKH",
+    },
+  ],
+  "compressed": true,
+  "decryptedWif": "cS3muNLM1GJye3x3Xa7J8zn8eqyQYg542UDHwHJNFnodJvu1pas4",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`testnet COINiDPrivate SWPTX generates correct return data 1`] = `"0100000000010156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD0100000017160014A85E7778EAB9C080A5A12662D571875BDC02D5F0FFFFFFFF01B8410F000000000017A914EF7242FAEC29933B37316EECA949E51A725415E18702483045022100BD2BFE8478E54E855BA6766D940343689E16FB03D97D37276FEF19FBBAEC1832022010093C5EEC24199CE0484310D3D6A0AD2B5A9F42AD081B765A3ADACBB8484175012102846DC62B2812B8C73C777E57C1ED6720538C6D3C46976916A9A884FC1446098000000000"`;
+
+exports[`testnet COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-tbtc://SWPTX/0100000000010156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD0100000017160014A85E7778EAB9C080A5A12662D571875BDC02D5F0FFFFFFFF01B8410F000000000017A914EF7242FAEC29933B37316EECA949E51A725415E18702483045022100BD2BFE8478E54E855BA6766D940343689E16FB03D97D37276FEF19FBBAEC1832022010093C5EEC24199CE0484310D3D6A0AD2B5A9F42AD081B765A3ADACBB8484175012102846DC62B2812B8C73C777E57C1ED6720538C6D3C46976916A9A884FC1446098000000000"`;
+
+exports[`testnet COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2SH-P2WPKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "outputInfo": Object {
+    "address": "2NF5JNAnFEjW5XagJoEsND8kcNoSJyEdRj6",
+    "derivationPath": "m/49'/1'/0'/0/0",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*1-*0-*0*0+2NF5JN",
+  "ticker": "tBTC",
+  "type": "swptx",
+}
+`;
+
+exports[`testnet COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "2N14MWFaFKfFcsMgTXKZeRhPZunNUWFzWGy",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2SH-P2WPKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "2NF5JNAnFEjW5XagJoEsND8kcNoSJyEdRj6",
+  "receiveDerivationPath": "m/49'/1'/0'/0/0",
+  "total": 1000000,
+}
+`;
+
+exports[`testnet COINiDPrivate TX generates correct return data 1`] = `"01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0200000017160014F9F2A3CCB09576A5B3051875696C76CCD336D9E000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0100000017160014CD1C06EAFD6CA35AE3BAA29D16EA9068929F8C210000000005400D03000000000017A91466A8A442F12B2B8A9C45D3D4CB1CCBDCA952D9A387B08F06000000000017A914D170EE37EA45FBB9DC81598C8445237EC47E8A678710270000000000001976A914F12F2C6E408B3CDFF1991B8783D1EB428F57814B88AC307500000000000016001408C3E3704FC510BEE9F2F05686CBF2A9F541E23F38FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D008702473044022077C2841BAC6048B11AFA84FD37387F4472BF26E38FB41EEA42FC5F03B0A37C4802202331CC8D8BD7C361DA74C73A16F15F00FFB25FF7008CB060A20563B3C95F914E012102BF72F7CC25C362B93849BEA9FC6647ABC2A57F1A09B96E5CD1A744DD5F48DF240247304402207EA3C82A3800EBBFB8E4153CC265F314A2578DBED00E3F1571779125B2A9E54402206CE3207827A11640369440453D958A5CA44FD1A753F1F29C1D226CF49CE4F16901210385B8C3935CBB69AC947782DB09C1B3E7E2681A7A82458C14EB4F7304F1EBFA9A00000000"`;
+
+exports[`testnet COINiDPrivate TX generates correct return data 2`] = `"coinid-tbtc://TX/01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0200000017160014F9F2A3CCB09576A5B3051875696C76CCD336D9E000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C0100000017160014CD1C06EAFD6CA35AE3BAA29D16EA9068929F8C210000000005400D03000000000017A91466A8A442F12B2B8A9C45D3D4CB1CCBDCA952D9A387B08F06000000000017A914D170EE37EA45FBB9DC81598C8445237EC47E8A678710270000000000001976A914F12F2C6E408B3CDFF1991B8783D1EB428F57814B88AC307500000000000016001408C3E3704FC510BEE9F2F05686CBF2A9F541E23F38FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D008702473044022077C2841BAC6048B11AFA84FD37387F4472BF26E38FB41EEA42FC5F03B0A37C4802202331CC8D8BD7C361DA74C73A16F15F00FFB25FF7008CB060A20563B3C95F914E012102BF72F7CC25C362B93849BEA9FC6647ABC2A57F1A09B96E5CD1A744DD5F48DF240247304402207EA3C82A3800EBBFB8E4153CC265F314A2578DBED00E3F1571779125B2A9E54402206CE3207827A11640369440453D958A5CA44FD1A753F1F29C1D226CF49CE4F16901210385B8C3935CBB69AC947782DB09C1B3E7E2681A7A82458C14EB4F7304F1EBFA9A00000000"`;
+
+exports[`testnet COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    4,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/1'/0'/1/0",
+    "m/49'/1'/0'/0/5",
+  ],
+  "inputValueArr": Array [
+    369796,
+    430000,
+  ],
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*1*0+2MTRGW",
+  "ticker": "TBTC",
+  "txHex": "0100000002A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C020000000000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000000000000005400D03000000000017A91466A8A442F12B2B8A9C45D3D4CB1CCBDCA952D9A387B08F06000000000017A914D170EE37EA45FBB9DC81598C8445237EC47E8A678710270000000000001976A914F12F2C6E408B3CDFF1991B8783D1EB428F57814B88AC307500000000000016001408C3E3704FC510BEE9F2F05686CBF2A9F541E23F38FA01000000000017A9142E95CFDD61B2F735E6BEDF5291B6F0873E4F1D008700000000",
+  "type": "tx",
+}
+`;
+
+exports[`testnet COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 799796,
+  "allOutputTotal": 799592,
+  "allOutputs": Array [
+    Object {
+      "address": "2N2c2wH4LcxhRjGXxggzmDL2iXsVBQEjwsK",
+      "amount": 200000,
+    },
+    Object {
+      "address": "2NCLeVvnAoXZou3LrZv9bJMcykSrXnjcRR1",
+      "amount": 430000,
+    },
+    Object {
+      "address": "n3WDexiKdJ7RA2xW1Zxx16UpBtuy276Los",
+      "amount": 10000,
+    },
+    Object {
+      "address": "tb1qprp7xuz0c5gta60j7ptgdjlj4865rc3l8gthfl",
+      "amount": 30000,
+    },
+    Object {
+      "address": "2MwVYYE5yeb4UqYcoGHRzWHnuPPqLBAFJk8",
+      "amount": 129592,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "2MwVYYE5yeb4UqYcoGHRzWHnuPPqLBAFJk8",
+      "amount": 129592,
+    },
+  ],
+  "changeTotal": 129592,
+  "externalOutputs": Array [
+    Object {
+      "address": "2N2c2wH4LcxhRjGXxggzmDL2iXsVBQEjwsK",
+      "amount": 200000,
+    },
+    Object {
+      "address": "2NCLeVvnAoXZou3LrZv9bJMcykSrXnjcRR1",
+      "amount": 430000,
+    },
+    Object {
+      "address": "n3WDexiKdJ7RA2xW1Zxx16UpBtuy276Los",
+      "amount": 10000,
+    },
+    Object {
+      "address": "tb1qprp7xuz0c5gta60j7ptgdjlj4865rc3l8gthfl",
+      "amount": 30000,
+    },
+  ],
+  "externalTotal": 670000,
+  "fee": 204,
+}
+`;
+
+exports[`testnet COINiDPrivate VAL generates correct return data 1`] = `"2NA5bUXmS96csYzmVJJs828MJehYm5j9K61"`;
+
+exports[`testnet COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/0/2",
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Bitcoin",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*1*0+2MTRGW",
+  "ticker": "tBTC",
+  "type": "val",
+}
+`;

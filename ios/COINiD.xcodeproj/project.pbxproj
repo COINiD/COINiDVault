@@ -45,6 +45,7 @@
 		9CA44808205EF2D500C4741E /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA447FB205EF1C400C4741E /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CA44826205F02B200C4741E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA44825205F02B200C4741E /* LaunchScreen.storyboard */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B8FE0C20C6B04A209E502316 /* libKCKeepAwake.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46735EBDC76B4D6DA1F3EF16 /* libKCKeepAwake.a */; };
 		C0C6FCD521CE462B82229DE0 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F632531344FE4D639EB1A524 /* libSplashScreen.a */; };
 		C4BDADCC11914D73811A361A /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E8C0B4AB5541CABFB5219E /* Zocial.ttf */; };
 		C7FF056BB1CB4BCBBCDD7DC4 /* libRCTP2PTransferBLEPeripheralModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12973CE62D8B45D3BC6BD752 /* libRCTP2PTransferBLEPeripheralModule.a */; };
@@ -333,6 +334,13 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		7CFF6058221465E60009A73C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26E60091AB434DECA2DC819F /* KCKeepAwake.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = KCKeepAwake;
+		};
 		822F2BC1218476AB00B42230 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC70634EA66C48D29680A6A1 /* RNCamera.xcodeproj */;
@@ -485,6 +493,7 @@
 		177653E38CD6499B83A06585 /* Inter-UI-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.ttf"; path = "../src/assets/fonts/Inter-UI-Bold.ttf"; sourceTree = "<group>"; };
 		1D463F62CC8948E3BFDDA85A /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		23EE73D483F146A18D6E3AC3 /* Inter-UI-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Black.ttf"; path = "../src/assets/fonts/Inter-UI-Black.ttf"; sourceTree = "<group>"; };
+		26E60091AB434DECA2DC819F /* KCKeepAwake.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = KCKeepAwake.xcodeproj; path = "../node_modules/react-native-keep-awake/ios/KCKeepAwake.xcodeproj"; sourceTree = "<group>"; };
 		271AC47D7A784BC5AFDFBFFE /* libRNRandomBytes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNRandomBytes.a; sourceTree = "<group>"; };
 		2772C169CBC64B4ABD751211 /* RNOS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNOS.xcodeproj; path = "../node_modules/react-native-os/ios/RNOS.xcodeproj"; sourceTree = "<group>"; };
 		3B219A8DFFBF435EAE814C9C /* libRNKeychain.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNKeychain.a; sourceTree = "<group>"; };
@@ -493,6 +502,7 @@
 		41BA3E3ED6114B8DA75020F1 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		427A67BD366B4BA8A136BF1F /* Inter-UI-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BoldItalic.ttf"; path = "../src/assets/fonts/Inter-UI-BoldItalic.ttf"; sourceTree = "<group>"; };
 		46277B877DC04916972C7056 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		46735EBDC76B4D6DA1F3EF16 /* libKCKeepAwake.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libKCKeepAwake.a; sourceTree = "<group>"; };
 		4737BDA3E7534F80B2581E99 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MaterialIcons-Regular.ttf"; path = "../src/assets/fonts/MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
 		484686093C104249BEB4E123 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		48DE90E92E7C4E29B1CE6612 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
@@ -560,6 +570,7 @@
 				C0C6FCD521CE462B82229DE0 /* libSplashScreen.a in Frameworks */,
 				65DB3714B5ED4A5CA57DE6B9 /* libRNCamera.a in Frameworks */,
 				D07C9803550D4EE595C663F9 /* libReactNativePermissions.a in Frameworks */,
+				B8FE0C20C6B04A209E502316 /* libKCKeepAwake.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,8 +752,17 @@
 				F632531344FE4D639EB1A524 /* libSplashScreen.a */,
 				953EC86396A2492694C0CE69 /* libRNCamera.a */,
 				D3415062E4C44F40A2FF4A18 /* libReactNativePermissions.a */,
+				46735EBDC76B4D6DA1F3EF16 /* libKCKeepAwake.a */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		7CFF6055221465E60009A73C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CFF6059221465E60009A73C /* libKCKeepAwake.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		822F2BBE218476AB00B42230 /* Products */ = {
@@ -812,6 +832,7 @@
 				539A511C43B741F8B0C76A83 /* SplashScreen.xcodeproj */,
 				BC70634EA66C48D29680A6A1 /* RNCamera.xcodeproj */,
 				F54961DE741F42FEBC471488 /* ReactNativePermissions.xcodeproj */,
+				26E60091AB434DECA2DC819F /* KCKeepAwake.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -935,8 +956,9 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = RTXAQQG73Y;
+						DevelopmentTeam = GC88SQF2BV;
 						LastSwiftMigration = 920;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 1;
@@ -960,6 +982,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 7CFF6055221465E60009A73C /* Products */;
+					ProjectRef = 26E60091AB434DECA2DC819F /* KCKeepAwake.xcodeproj */;
+				},
 				{
 					ProductGroup = 9CA447F4205EF1C400C4741E /* Products */;
 					ProjectRef = 7F77DC592B574B4C9EDADCF8 /* Lottie.xcodeproj */;
@@ -1338,6 +1364,13 @@
 			remoteRef = 7CB2E4661FDC74BE00BB17E3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		7CFF6059221465E60009A73C /* libKCKeepAwake.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKCKeepAwake.a;
+			remoteRef = 7CFF6058221465E60009A73C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		822F2BC2218476AB00B42230 /* libRNCamera.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1521,9 +1554,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = COINiD/COINiD.entitlements;
-				CURRENT_PROJECT_VERSION = 105;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 130;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = RTXAQQG73Y;
+				DEVELOPMENT_TEAM = GC88SQF2BV;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1545,11 +1580,13 @@
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-keep-awake/ios",
 				);
 				INFOPLIST_FILE = COINiD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/COINiD\"",
 					"\"$(SRCROOT)/COINiD\"",
 					"\"$(SRCROOT)/COINiD\"",
 				);
@@ -1560,6 +1597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.coinid;
 				PRODUCT_NAME = COINiD;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "COINiD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1574,8 +1612,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = COINiD/COINiD.entitlements;
-				CURRENT_PROJECT_VERSION = 105;
-				DEVELOPMENT_TEAM = RTXAQQG73Y;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 130;
+				DEVELOPMENT_TEAM = GC88SQF2BV;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1597,11 +1637,13 @@
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-keep-awake/ios",
 				);
 				INFOPLIST_FILE = COINiD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/COINiD\"",
 					"\"$(SRCROOT)/COINiD\"",
 					"\"$(SRCROOT)/COINiD\"",
 				);
@@ -1612,6 +1654,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.coinid;
 				PRODUCT_NAME = COINiD;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "COINiD-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

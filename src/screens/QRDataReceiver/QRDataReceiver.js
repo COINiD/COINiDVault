@@ -96,6 +96,7 @@ class QRDataReceiver extends PureComponent {
 
     return (
       <QRDataTransferReceiver
+        containerStyle={{ backgroundColor: 'black' }}
         cameraType={cameraType}
         renderCompletedItems={renderCompletedItems}
         onComplete={this._dataReceived}

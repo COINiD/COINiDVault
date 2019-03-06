@@ -1,5 +1,3 @@
-
-
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
@@ -14,7 +12,7 @@ export default class DialogTitle extends PureComponent {
 
   render() {
     const {
-      title, closeFunc, showMoreOptions, onMoreOptions,
+      title, closeFunc, showMoreOptions, hideCloseIcon, onMoreOptions,
     } = this.props;
 
     const renderMoreOptions = () => {
@@ -29,7 +27,31 @@ export default class DialogTitle extends PureComponent {
           onPress={onMoreOptions}
           name="more-vert"
           hitSlop={{
-            top: 20, left: 20, right: 20, bottom: 20,
+            top: 20,
+            left: 20,
+            right: 20,
+            bottom: 20,
+          }}
+        />
+      );
+    };
+
+    const renderCloseIcon = () => {
+      if (hideCloseIcon) {
+        return null;
+      }
+
+      return (
+        <Icon
+          containerStyle={styles.closeIconContainer}
+          iconStyle={styles.closeIconFont}
+          name="close"
+          onPress={closeFunc}
+          hitSlop={{
+            top: 20,
+            bottom: 20,
+            right: 20,
+            left: 20,
           }}
         />
       );
@@ -37,16 +59,9 @@ export default class DialogTitle extends PureComponent {
 
     return (
       <View style={styles.container}>
-        { renderMoreOptions() }
-        <Icon
-          containerStyle={styles.closeIconContainer}
-          iconStyle={styles.closeIconFont}
-          name="close"
-          onPress={closeFunc}
-          hitSlop={{
-            top: 20, bottom: 20, right: 20, left: 20,
-          }}
-        />
+        {renderMoreOptions()}
+        {renderCloseIcon()}
+
         <Text style={styles.title}>{title}</Text>
       </View>
     );

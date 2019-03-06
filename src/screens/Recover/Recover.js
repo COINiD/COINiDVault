@@ -18,7 +18,9 @@ import { ifAndroid, ifSmallDevice, isSmallDevice } from '../../utils/device';
 
 class Screen extends Component {
   themeStyle = '';
+
   theme = '';
+
   mnemonicArr = [];
 
   constructor(props): void {
@@ -42,7 +44,7 @@ class Screen extends Component {
   getChildContext = () => ({ theme: this.theme });
 
   prevWord = () => {
-    var i = this.state.mnemonicCount - 1;
+    const i = this.state.mnemonicCount - 1;
     if (i >= 0) {
       this.setState({
         mnemonicWord: this.mnemonicArr[i],
@@ -58,7 +60,7 @@ class Screen extends Component {
 
     this.mnemonicArr[this.state.mnemonicCount] = this.state.mnemonicWord;
 
-    var i = this.state.mnemonicCount + 1;
+    const i = this.state.mnemonicCount + 1;
     if (i < 12) {
       this.setState({
         mnemonicWord: this.mnemonicArr[i] || '',
@@ -69,8 +71,8 @@ class Screen extends Component {
     }
   };
 
-  validateMnemonic = ignoreValidation => {
-    var mnemonic = this.mnemonicArr
+  validateMnemonic = (ignoreValidation) => {
+    const mnemonic = this.mnemonicArr
       .join(' ')
       .trim()
       .toLowerCase();
@@ -87,8 +89,8 @@ class Screen extends Component {
     }
   };
 
-  saveMnemonic = pin => {
-    var mnemonic = this.mnemonicArr
+  saveMnemonic = (pin) => {
+    const mnemonic = this.mnemonicArr
       .join(' ')
       .trim()
       .toLowerCase();
@@ -98,7 +100,7 @@ class Screen extends Component {
     });
   };
 
-  pinSuccess = pin => {
+  pinSuccess = (pin) => {
     this.saveMnemonic(pin);
   };
 
@@ -120,37 +122,30 @@ class Screen extends Component {
     });
   };
 
-  _return() {
+  _return = () => {
     this.props.navigation.state.params.onReady();
     this.props.navigation.goBack();
-  }
+  };
 
-  _onFocus() {
+  _onFocus = () => {
     this.setState({
       inputFocusStyle: this.themeStyle.inputFocused,
       inputFocused: true,
     });
-  }
+  };
 
-  _onBlur() {
+  _onBlur = () => {
     this.setState({
       inputFocusStyle: this.themeStyle.inputBlurred,
       inputFocused: false,
     });
-  }
+  };
 
-  _nextDisabled() {
-    return (
-      this.state.mnemonicWord.length < 1 &&
-      !(this.state.mnemonicCount == 12 - 1)
-    );
-  }
+  _nextDisabled = () => this.state.mnemonicWord.length < 1 && !(this.state.mnemonicCount == 12 - 1);
 
-  _prevDisabled() {
-    return this.state.mnemonicCount == 0;
-  }
+  _prevDisabled = () => this.state.mnemonicCount == 0;
 
-  render = function() {
+  render() {
     const { theme } = this.props.navigation.state.params || {};
     const themeStyle = this.themeStyle;
     const {
@@ -165,7 +160,7 @@ class Screen extends Component {
     if (setPin) {
       return (
         <SetPin
-          title={'Recover COINiD Vault'}
+          title="Recover COINiD Vault"
           themeStyle={themeStyle}
           onSuccess={this.pinSuccess}
           onCancel={this.pinCancel}
@@ -179,8 +174,8 @@ class Screen extends Component {
           <View style={themeStyle.topContainer}>
             <Text h2>Invalid Mnemonic</Text>
             <Text>
-              The phrase you have just entered is not something that have been
-              generated with this app. Are you sure you wish to recover it?
+              The phrase you have just entered is not something that have been generated with this
+              app. Are you sure you wish to recover it?
             </Text>
           </View>
           <View style={[themeStyle.bottomContainer]}>
@@ -201,8 +196,8 @@ class Screen extends Component {
         {...ifAndroid(
           {},
           {
-            behavior: ifSmallDevice('position', 'height'),
-          }
+            behavior: ifSmallDevice('position', 'padding'),
+          },
         )}
       >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -213,34 +208,35 @@ class Screen extends Component {
                 name="close"
                 color={colors.getTheme().text}
                 containerStyle={themeStyle.topIcon}
-                onPress={this._return.bind(this)}
+                onPress={this._return}
                 underlayColor="transparent"
-                hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
+                hitSlop={{
+                  top: 20,
+                  bottom: 20,
+                  left: 20,
+                  right: 20,
+                }}
               />
               <Text h2>Recover COINiD Vault</Text>
               <Text>Enter the 12 word recovery phrase.</Text>
             </View>
             <View
-              style={
-                isSmallDevice() && inputFocused
-                  ? themeStyle.flexEnd
-                  : themeStyle.spaceBetween
-              }
+              style={isSmallDevice() && inputFocused ? themeStyle.flexEnd : themeStyle.spaceBetween}
             >
               <View>
-                <Text style={themeStyle.mnemonicCount}>
-                  {mnemonicCount + 1} of 12
-                </Text>
+                <Text style={themeStyle.mnemonicCount}>{`${mnemonicCount + 1} of 12`}</Text>
                 <TextInput
                   autoCorrect={false}
+                  autoComplete="off"
                   autoFocus={false}
-                  selectionColor={'#FFF'}
+                  spellCheck={false}
+                  selectionColor="#FFF"
                   maxLength={16}
-                  autoCapitalize={'none'}
-                  returnKeyType={'next'}
+                  autoCapitalize="none"
+                  returnKeyType="next"
                   blurOnSubmit={false}
                   onSubmitEditing={this.nextWord}
-                  placeholder={'Enter word'}
+                  placeholder="Enter word"
                   style={[themeStyle.wordInput, inputFocusStyle]}
                   onBlur={() => this._onBlur()}
                   onFocus={() => this._onFocus()}
@@ -262,7 +258,7 @@ class Screen extends Component {
                   style={themeStyle.prevNextBtn}
                   onPress={this.nextWord}
                 >
-                  {mnemonicCount == 12 - 1 ? 'Save' : 'Next Word'}
+                  {mnemonicCount === 12 - 1 ? 'Save' : 'Next Word'}
                 </Button>
               </View>
             </View>
@@ -270,7 +266,7 @@ class Screen extends Component {
         </TouchableWithoutFeedback>
       </KeyboardAvoidingView>
     );
-  };
+  }
 }
 
 Screen.childContextTypes = {

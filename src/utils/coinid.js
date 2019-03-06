@@ -2,6 +2,8 @@
  * COINiD Helper
  */
 
+ const coinidPrivate = require('coinid-private');
+
 export const getCoinIdDataFromUrl = (url) => {
   try {
     const data = url.split('://')[1];
@@ -10,11 +12,11 @@ export const getCoinIdDataFromUrl = (url) => {
     const coinIdData = splitData.splice(1).join('/');
 
     if (!returnScheme) {
-      throw('Return scheme is missing...');
+      throw ('Return scheme is missing...');
     }
 
     if (!coinIdData) {
-      throw('COINiD data is missing...');
+      throw ('COINiD data is missing...');
     }
 
     return {
@@ -22,28 +24,30 @@ export const getCoinIdDataFromUrl = (url) => {
       coinIdData,
       variant: variant || '',
     };
-  }
-  catch (err) {
+  } catch (err) {
     return {
       returnScheme: '',
       coinIdData: '',
       variant: '',
     };
   }
-}
+};
 
-export const validateCoinIdDataFromUrl = (url) => {
-  var { returnScheme, coinIdData } = getCoinIdDataFromUrl(url);
-  return validateCoinIdData(coinIdData);
-}
+export const getInfoFromCoinIdUrl = (url) => {
+  const { coinIdData } = getCoinIdDataFromUrl(url);
+  return coinidPrivate(coinIdData).getInfo();
+};
 
 export const validateCoinIdData = (coinIdData) => {
   try {
-    const coinId = require('coinid-private')(coinIdData);
-    return true;
+    const coinId = coinidPrivate(coinIdData);
+    return coinId;
+  } catch (err) {
+    throw (err);
   }
-  catch(err) {
-    throw(err);
-    return false;
-  }
-}
+};
+
+export const validateCoinIdDataFromUrl = (url) => {
+  const { coinIdData } = getCoinIdDataFromUrl(url);
+  return validateCoinIdData(coinIdData);
+};

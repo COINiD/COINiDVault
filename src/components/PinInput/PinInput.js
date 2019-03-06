@@ -1,46 +1,38 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { View, TextInput, TouchableWithoutFeedback } from 'react-native';
-import { Button, Text } from '../../components';
-
-import styles from './styles';
+import { View, TouchableWithoutFeedback } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
+import styles from './styles';
 
 class PinInput extends PureComponent {
-  constructor(props): void {
-    super(props);
-  }
-
   render() {
-    let {props, context} = this;
-    let themeStyle = styles(context.theme || '');
+    const { props, context } = this;
+    const themeStyle = styles(context.theme || '');
 
     const getPins = (numPins) => {
-      var pinArr = [];
+      const pinArr = [];
 
-      for (var i = 0; i < numPins; i++) {
-        var pinStyle = [themeStyle.pin];
+      for (let i = 0; i < numPins; i += 1) {
+        const pinStyle = [themeStyle.pin];
 
-        if(props.value.length > i) {
+        if (props.value.length > i) {
           pinStyle.push(themeStyle.filled);
           pinStyle.push(props.filledStyle);
         }
 
         pinStyle.push(props.pinStyle);
 
-        pinArr.push(<View key={'pin'+i} style={pinStyle} />)
+        pinArr.push(<View key={`pin${i}`} style={pinStyle} />);
       }
 
       return pinArr;
-    }
+    };
 
     return (
       <TouchableWithoutFeedback onPress={props.onPress}>
-        <View style={[themeStyle.container, props.style]}>
-          {getPins(props.numPins)}
-        </View>
+        <View style={[themeStyle.container, props.style]}>{getPins(props.numPins)}</View>
       </TouchableWithoutFeedback>
     );
   }
@@ -52,8 +44,6 @@ PinInput.defaultProps = {
   onPress: () => {},
 };
 
+const AnimatablePinInput = Animatable.createAnimatableComponent(PinInput);
 
-PinInput = Animatable.createAnimatableComponent(PinInput);
-
-
-export default PinInput;
+export default AnimatablePinInput;

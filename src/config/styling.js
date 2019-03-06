@@ -10,12 +10,13 @@ export const colors = {
   green: '#00D6B0',
   lightGray: '#D8D8D8',
   mediumGray: '#8A8A8F',
+  anotherGray: '#F5F5F5',
   orange: '#FA503C',
   pink: '#EC4E74',
   purple: '#617AF7',
   white: '#FFFFFF',
 
-  getTheme: theme => {
+  getTheme: (theme) => {
     if (theme === 'dark') {
       return {
         background: colors.purple,
@@ -104,9 +105,6 @@ export const layout = {
   paddingHorizontal: 24,
   ...ifSmallDevice(
     { paddingTop: 38, paddingBottom: 16 },
-    ifIphoneX(
-      { paddingTop: 100, paddingBottom: 58 },
-      { paddingTop: 80, paddingBottom: 24 },
-    ),
+    ifIphoneX({ paddingTop: 100, paddingBottom: 58 }, { paddingTop: 80, paddingBottom: 24 }),
   ),
 };

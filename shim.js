@@ -12,7 +12,15 @@ if (typeof process === 'undefined') {
 }
 
 process.browser = false
-if (typeof Buffer === 'undefined') global.Buffer = require('buffer').Buffer
+if (typeof Buffer === 'undefined') global.Buffer = require('safe-buffer').Buffer
+
+if (typeof Buffer.prototype.reverse === 'undefined') {
+	var bufferReverse = require('buffer-reverse');
+
+	Buffer.prototype.reverse = function () {
+	  return bufferReverse(this);
+	};
+}
 
 // global.location = global.location || { port: 80 }
 const isDev = typeof __DEV__ === 'boolean' && __DEV__
@@ -20,3 +28,7 @@ process.env['NODE_ENV'] = isDev ? 'development' : 'production'
 if (typeof localStorage !== 'undefined') {
   localStorage.debug = isDev ? '*' : ''
 }
+
+// If using the crypto shim, uncomment the following line to ensure
+// crypto is loaded first, so it can populate global.crypto
+require('crypto')

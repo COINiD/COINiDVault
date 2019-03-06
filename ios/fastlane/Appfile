@@ -1,7 +1,7 @@
 app_identifier("org.coinid") # The bundle identifier of your app
 
-itc_team_id("119026247") # iTunes Connect Team ID
-team_id("RTXAQQG73Y") # Developer Portal Team ID
+itc_team_id("119545920") # iTunes Connect Team ID
+team_id("GC88SQF2BV") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile

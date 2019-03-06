@@ -12,6 +12,7 @@ import {
   UpdatePIN,
   QRDataReceiver,
   QRDataSender,
+  QRSweeper,
 } from '../screens';
 
 export const HomeStack = createStackNavigator(
@@ -22,9 +23,18 @@ export const HomeStack = createStackNavigator(
     Settings: { screen: Settings },
     Backup: { screen: Backup },
     Sign: { screen: Sign },
+    QRSweeper: { screen: QRSweeper },
     UpdatePIN: { screen: UpdatePIN },
     QRDataReceiver: { screen: QRDataReceiver },
     QRDataSender: { screen: QRDataSender },
+    COINiDtx: { screen: Sign },
+    COINiDpub: { screen: Sign },
+    COINiDval: { screen: Sign },
+    COINiDmsg: { screen: Sign },
+    COINiD2fa: { screen: Sign },
+    COINiDsah: { screen: Sign },
+    COINiDswp: { screen: QRSweeper },
+    COINiDswptx: { screen: Sign },
   },
   {
     headerMode: 'none',

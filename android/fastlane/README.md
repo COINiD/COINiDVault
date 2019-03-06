@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane android beta
 ```
 
+### android message_slack
+```
+fastlane android message_slack
+```
+
 ### android bump_version_code
 ```
 fastlane android bump_version_code

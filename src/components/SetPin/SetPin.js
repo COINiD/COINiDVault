@@ -1,21 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  View,
-} from 'react-native';
+import { View } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
 
 import {
-  Button,
-  Text,
-  PinInput,
-  KeyboardWrapper,
+  Button, Text, PinInput, KeyboardWrapper,
 } from '..';
-
-import { colors } from '../../config/styling';
-import styles from './styles';
 
 const customShake = {
   0: {
@@ -84,7 +76,7 @@ class SetPin extends PureComponent {
         setTimeout(() => {
           try {
             this.errorText.fadeOut(800);
-          } catch (err) { }
+          } catch (err) {}
         }, 2000);
       });
 
@@ -105,9 +97,7 @@ class SetPin extends PureComponent {
 
   render() {
     const themeStyle = this.themeStyle;
-    const returnFunc = this.state.confirmPIN
-      ? this._submitConfirmPin
-      : this._submitSetPin;
+    const returnFunc = this.state.confirmPIN ? this._submitConfirmPin : this._submitSetPin;
 
     const pinChange = (pin) => {
       pin = pin.replace(/\D/g, ''); // remove all non numeric
@@ -116,7 +106,7 @@ class SetPin extends PureComponent {
       if (pin.length === 6) {
         this.timer = setTimeout(() => {
           returnFunc(pin);
-        }, 200);
+        }, 100);
       } else {
         this.setState({ pinDiffers: false });
       }
@@ -133,9 +123,7 @@ class SetPin extends PureComponent {
             Cancel
           </Button>
           <Text h2>{this.props.title}</Text>
-          <Text>
-            {this.state.confirmPIN ? 'Confirm new PIN' : 'Enter a new PIN'}
-          </Text>
+          <Text>{this.state.confirmPIN ? 'Confirm new PIN' : 'Enter a new PIN'}</Text>
           <PinInput
             ref="pinInput"
             value={this.state.pin}
@@ -144,7 +132,7 @@ class SetPin extends PureComponent {
           />
           {this.state.pinDiffers ? (
             <Animatable.Text
-              ref={c => this.errorText = c}
+              ref={c => (this.errorText = c)}
               useNativeDriver
               style={{ fontSize: 16, marginTop: 6 }}
             >
@@ -156,7 +144,9 @@ class SetPin extends PureComponent {
       <KeyboardWrapper
         key={2}
         value={this.state.pin}
-        ref={(c) => { this._p2pKeyboard = c; }}
+        ref={(c) => {
+          this._p2pKeyboard = c;
+        }}
         onValueChange={pinChange}
         isLocked
       />,

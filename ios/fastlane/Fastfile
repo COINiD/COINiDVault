@@ -17,10 +17,11 @@ platform :ios do
     increment_build_number(xcodeproj: "COINiD.xcodeproj")
     build_app(scheme: "COINiD")
     upload_to_testflight(skip_waiting_for_build_processing: true)
+
     slack(
-    	message: "Ny Vault på väg till TestFlight!",
-    	default_payloads: [],
-    	slack_url: 'https://hooks.slack.com/services/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'
+      message: "New Vault coming to Testflight!",
+      default_payloads: [],
+      slack_url: ENV['SLACK_URL']
     )
   end
 end

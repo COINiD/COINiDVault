@@ -1,23 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Animated,
-  View,
-  TextInput,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-} from 'react-native';
+import { View, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { ifIphoneX } from 'react-native-iphone-x-helper';
 import LottieView from 'lottie-react-native';
 import moment from 'moment';
 
 import TouchID from 'react-native-touch-id';
-import { Button, Text } from '..';
+import { Text } from '..';
 
 import styles from './styles';
-
 
 const lottieFiles = {
   faceid: require('../../animations/faceid.json'),
@@ -43,11 +36,7 @@ class PinKeyboard extends PureComponent {
 
   integratedInput = () => {
     if (this.props.children) {
-      return (
-        <View style={this.themeStyle.integratedInput}>
-          {this.props.children}
-        </View>
-      );
+      return <View style={this.themeStyle.integratedInput}>{this.props.children}</View>;
     }
     return null;
   };
@@ -242,8 +231,10 @@ class PinKeyboard extends PureComponent {
                 marginBottom: 16,
               }}
             />
-            <Text style={ themeStyle.disabledPinTitle }>PIN input has been disabled</Text>
-            <Text style={ themeStyle.disabledPinText }>{`try again ${moment.duration(pinLockoutTime).humanize(true)}`}</Text>
+            <Text style={themeStyle.disabledPinTitle}>PIN input has been disabled</Text>
+            <Text style={themeStyle.disabledPinText}>
+              {`try again ${moment.duration(pinLockoutTime).humanize(true)}`}
+            </Text>
           </View>
         );
       }
@@ -253,12 +244,7 @@ class PinKeyboard extends PureComponent {
 
     return (
       <TouchableWithoutFeedback accessible={false}>
-        <View
-          style={[
-            themeStyle.container,
-            { bottom, ...ifIphoneX({ paddingBottom: 32 }, {}) },
-          ]}
-        >
+        <View style={[themeStyle.container, { bottom, ...ifIphoneX({ paddingBottom: 32 }, {}) }]}>
           {this.integratedInput()}
           {renderKeyboardArea()}
         </View>

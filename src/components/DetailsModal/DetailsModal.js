@@ -1,5 +1,3 @@
-
-
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -9,42 +7,49 @@ import { DialogTitle, Modal } from '..';
 import styles from './styles';
 
 export default class DetailsModal extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
   _open = () => {
     this.elModal._open();
-  }
+  };
 
   _close = () => {
     this.elModal._close();
-  }
+  };
 
   _setKeyboardOffset = (offset) => {
     this.elModal._setKeyboardOffset(offset);
-  }
+  };
 
   render() {
-    const { showMoreOptions, onMoreOptions, title, children } = this.props;
+    const {
+      showMoreOptions,
+      onMoreOptions,
+      hideCloseIcon,
+      title,
+      children,
+      dialogStyle,
+    } = this.props;
 
     return (
       <Modal
         {...this.props}
-        ref={c => this.elModal = c}
+        ref={(c) => {
+          this.elModal = c;
+        }}
       >
-        <View style={styles.dialog}>
+        <View style={[styles.dialog, dialogStyle]}>
           <DialogTitle
             title={title}
             closeFunc={this._close}
             showMoreOptions={showMoreOptions}
             onMoreOptions={onMoreOptions}
+            hideCloseIcon={hideCloseIcon}
           />
-          <View style={{
-            marginTop: -56,
-            paddingTop: 56,
-            maxHeight: '100%',
-          }}
+          <View
+            style={{
+              marginTop: -56,
+              paddingTop: 56,
+              maxHeight: '100%',
+            }}
           >
             {children}
           </View>

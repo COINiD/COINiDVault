@@ -3,6 +3,7 @@ package org.coinid.vault;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.corbt.keepawake.KCKeepAwakePackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.rnfingerprint.FingerprintAuthPackage;
@@ -33,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new KCKeepAwakePackage(),
             new RNCameraPackage(),
             new SplashScreenReactPackage(),
             new FingerprintAuthPackage(),

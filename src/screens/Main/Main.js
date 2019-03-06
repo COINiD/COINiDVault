@@ -7,22 +7,20 @@ import {
 import { Icon } from 'react-native-elements';
 import LottieView from 'lottie-react-native';
 import SplashScreen from 'react-native-splash-screen';
-import blePeripheral from 'react-native-p2p-transfer-ble-peripheral';
 
 import styles from './styles';
 import {
   Button, Loading, Text, KeyboardWrapper,
 } from '../../components';
-import {
-  SelectColdTransportType,
-} from '../../dialogs';
+import { SelectColdTransportType } from '../../dialogs';
 import { colors } from '../../config/styling';
 
 import { hasMnemonic } from '../../utils/mnemonic';
-import { validateCoinIdDataFromUrl } from '../../utils/coinid';
+import { validateCoinIdDataFromUrl, getInfoFromCoinIdUrl } from '../../utils/coinid';
 
 import { p2pClient } from '../../utils/p2p-ble-peripheral';
 
+import { getSweepedKeysFromStore } from '../../utils/sweepkey';
 
 const lottieFiles = {
   logo: require('../../animations/logo.json'),
@@ -51,6 +49,10 @@ class Screen extends Component {
 
     AppState.addEventListener('change', this._handleAppStateChange);
 
+    getSweepedKeysFromStore().then((storedKeys) => {
+      console.log({ storedKeys });
+    });
+
     /*
     blePeripheral.isSupported().then((isBLESupported) => {
       this.setState({isBLESupported});
@@ -74,9 +76,12 @@ class Screen extends Component {
   };
 
   _handleOpenURL = (url) => {
+    console.log({ url });
+
     if (url) {
       this._handleOpenURLPromise(url)
         .then((returnUrl) => {
+          console.log({ returnUrl });
           if (returnUrl !== null) {
             Linking.openURL(returnUrl);
           }
@@ -93,22 +98,25 @@ class Screen extends Component {
         .then(() => {
           this.queuedUrl = '';
 
-          const signingDone = ({ variant, returnUrl }) => resolve(returnUrl);
+          const signingDone = ({ returnUrl }) => resolve(returnUrl);
 
           const signingError = error => reject(error);
 
           try {
             if (validateCoinIdDataFromUrl(url)) {
-              const { navigation: { navigate, goBack } } = this.props;
+              const { type } = getInfoFromCoinIdUrl(url);
+              const {
+                navigation: { navigate, goBack },
+              } = this.props;
 
               goBack('sign-123'); // remove old sign modal if active..
 
               navigate({
-                routeName: 'Sign',
+                routeName: `COINiD${type}`,
                 params: {
                   theme: 'white',
                   url,
-                  onSigned: signingDone,
+                  onDone: signingDone,
                   onError: signingError,
                 },
                 key: 'sign-123',
@@ -231,24 +239,25 @@ class Screen extends Component {
       }
 
       if (transportType === 'qr') {
-        const { navigation: { navigate } } = this.props;
+        const {
+          navigation: { navigate },
+        } = this.props;
 
         navigate('QRDataReceiver', {
           onComplete: (data) => {
-            this._handleOpenURLPromise(data)
-              .then((signedData) => {
-                if (signedData) {
-                  navigate('QRDataSender', {
-                    data: signedData,
-                    theme: 'darkblue',
-                  });
-                }
-              });
+            this._handleOpenURLPromise(data).then((signedData) => {
+              if (signedData) {
+                navigate('QRDataSender', {
+                  data: signedData,
+                  theme: 'darkblue',
+                });
+              }
+            });
           },
         });
       }
     });
-  }
+  };
 
   _showP2PKeyboard = () => {
     this._p2pKeyboard._showKeyboard();
@@ -288,7 +297,9 @@ class Screen extends Component {
     const renderExternalButton = () => {
       if (!isBLESupported) {
         return (
-          <Text button style={themeStyle.supportText}>This device only supports hot wallet signing</Text>
+          <Text button style={themeStyle.supportText}>
+            This device only supports hot wallet signing
+          </Text>
         );
       }
 
@@ -315,21 +326,25 @@ class Screen extends Component {
               name="settings"
               color={colors.getTheme().highlight}
               iconStyle={{
-                padding: 0, margin: 0, height: 24, width: 24,
+                padding: 0,
+                margin: 0,
+                height: 24,
+                width: 24,
               }}
               containerStyle={themeStyle.topIcon}
               onPress={() => navigate('Settings', { onReady, theme: 'light' })}
               hitSlop={{
-                top: 20, bottom: 20, left: 20, right: 20,
+                top: 20,
+                bottom: 20,
+                left: 20,
+                right: 20,
               }}
             />
-            <Text h1>
-              COINiD Vault is all set
-            </Text>
+            <Text h1>COINiD Vault is all set</Text>
             <Text h3>Ready to sign COINiD requests</Text>
           </View>
           <View style={[themeStyle.bottomContainer]}>
-            { renderExternalButton() }
+            {renderExternalButton()}
             <View
               style={{
                 marginTop: 16,
@@ -361,7 +376,9 @@ class Screen extends Component {
         />,
         <SelectColdTransportType
           key={3}
-          ref={(c) => { this.coldTransportModal = c; }}
+          ref={(c) => {
+            this.coldTransportModal = c;
+          }}
         />,
       ];
     }

@@ -127,8 +127,8 @@ android {
         applicationId "org.coinid.vault"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 44
-        versionName "1.2"
+        versionCode 60
+        versionName "1.4"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -172,6 +172,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-keep-awake')
     compile project(':react-native-camera')
     compile project(':react-native-splash-screen')
     compile project(':react-native-touch-id')

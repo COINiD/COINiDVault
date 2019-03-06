@@ -2,26 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Alert,
-  View,
-  Platform,
-  ScrollView,
+  Alert, View, Platform, ScrollView,
 } from 'react-native';
 
 import styles from './styles';
 import { fontStack, fontWeight } from '../../config/styling';
 
 import {
-  Button,
-  Text,
-  TxInfoRow,
-  KeyboardWrapper,
+  Button, Text, TxInfoRow, KeyboardWrapper,
 } from '../../components';
 
 import { loadMnemonic } from '../../utils/mnemonic';
 import { getCoinIdDataFromUrl } from '../../utils/coinid';
 import { numFormat } from '../../utils/numFormat';
 import createStyleArr from '../../utils/createStyleArr';
+import { findSweepedKeyInStore } from '../../utils/sweepkey';
 
 class Screen extends Component {
   themeStyle = '';
@@ -33,7 +28,13 @@ class Screen extends Component {
   constructor(props): void {
     super(props);
 
-    const { navigation: { state: { params: { theme, url } } } } = this.props;
+    const {
+      navigation: {
+        state: {
+          params: { theme, url },
+        },
+      },
+    } = this.props;
     this.theme = theme;
     this.themeStyle = styles(theme);
     this.url = url;
@@ -67,6 +68,8 @@ class Screen extends Component {
           return 'Myriad Wallet for COINiD';
         case 'coinid-grs':
           return 'Groestlcoin Wallet for COINiD';
+        case 'coinid-tgrs':
+          return 'GRS Testnet Wallet for COINiD';
         default:
           return 'Unknown';
       }
@@ -99,11 +102,34 @@ class Screen extends Component {
       this.setState({
         isLoadingText: 'Signing',
         txOutputs: txInfo.externalOutputs,
-        txTo: txInfo.externalOutputs[0].address,
-        txAmount: txInfo.externalOutputs[0].amount,
         txFee: txInfo.fee,
         txTotal: txInfo.externalTotal + txInfo.fee,
-        txTicker: info.ticker.toUpperCase(),
+        txTicker: info.network.ticker,
+      });
+    }
+
+    if (info.type === 'swptx') {
+      const swpTxInfo = coinId.getSwpTxInfo();
+
+      const swpTxAddressGroups = swpTxInfo.inputs.reduce((a, { address, satValue }) => {
+        const acc = { ...a };
+        if (!acc[address]) {
+          acc[address] = { address, satValue };
+        } else {
+          acc[address].satValue += satValue;
+        }
+
+        return acc;
+      }, {});
+
+      this.setState({
+        isLoadingText: 'Signing',
+        swpTxReceiveAddress: swpTxInfo.receiveAddress,
+        swpTxInputs: swpTxInfo.inputs,
+        swpTxFee: swpTxInfo.fee,
+        swpTxTotal: swpTxInfo.total - swpTxInfo.fee,
+        swpTxTicker: info.network.ticker,
+        swpTxAddressGroups: Object.values(swpTxAddressGroups),
       });
     }
 
@@ -141,23 +167,33 @@ class Screen extends Component {
     this._keyboard._showKeyboard();
   };
 
-  _sign = (pin) => {
-    const { navigation: { goBack, state: { params: { onSigned, onError } } } } = this.props;
+  _sign = async (pin) => {
+    const {
+      navigation: {
+        goBack,
+        state: {
+          params: { onDone, onError },
+        },
+      },
+    } = this.props;
 
     const {
       coinId, returnScheme, type, variant,
     } = this.state;
 
-    const buildReturnUrl = (data) => {
-      const getReturnScheme = () => {
-        if (variant.toLowerCase() === 'p2p') {
-          return returnScheme.toUpperCase();
-        }
-        return returnScheme;
-      };
+    const extraData = {};
+    if (type === 'swptx') {
+      const { ticker } = coinId.getInfo();
+      const { swpTxAddressGroups } = this.state;
+      const { address: sweepAddress } = swpTxAddressGroups[0];
 
-      return `${getReturnScheme()}://${type.toUpperCase()}/${data}`;
-    };
+      const foundKey = await findSweepedKeyInStore({
+        address: sweepAddress,
+        ticker: ticker.toLowerCase(),
+      });
+
+      extraData.wif = foundKey.decryptedWif;
+    }
 
     this.setState({
       isLoading: true,
@@ -167,9 +203,9 @@ class Screen extends Component {
     loadMnemonic(pin).then((mnemonic) => {
       if (mnemonic) {
         coinId
-          .getReturnData(mnemonic)
+          .getReturnData(mnemonic, extraData)
           .then((data) => {
-            let returnUrl = buildReturnUrl(data);
+            let returnUrl = coinId.buildReturnUrl({ data, returnScheme, variant });
 
             if (type === 'val') {
               Alert.alert('Validated address', data);
@@ -177,7 +213,7 @@ class Screen extends Component {
             }
 
             goBack();
-            setTimeout(() => onSigned({ variant, returnUrl }), 400);
+            setTimeout(() => onDone({ variant, returnUrl }), 400);
           })
           .catch((error) => {
             Alert.alert('Signing error', `${error}`);
@@ -194,7 +230,22 @@ class Screen extends Component {
     const { themeStyle } = this;
 
     const {
-      openKeyboardOnShow, txOutputs, txTicker, type, schemeOwner, txFee, txTotal, msgMessage, isLoading, isLoadingText,
+      openKeyboardOnShow,
+      txOutputs,
+      txTicker,
+      type,
+      schemeOwner,
+      txFee,
+      txTotal,
+      msgMessage,
+      isLoading,
+      isLoadingText,
+      swpTxReceiveAddress,
+      swpTxInputs,
+      swpTxFee,
+      swpTxTotal,
+      swpTxTicker,
+      swpTxAddressGroups,
     } = this.state;
 
     const getOutputs = () => {
@@ -208,8 +259,10 @@ class Screen extends Component {
 
         return (
           <View style={styleArr} key={i}>
-            <TxInfoRow label="To:">{output.address}</TxInfoRow>
-            <TxInfoRow label="Amount:">
+            <TxInfoRow label="To:" labelStyle={themeStyle.labelStyle}>
+              {output.address}
+            </TxInfoRow>
+            <TxInfoRow label="Amount:" labelStyle={themeStyle.labelStyle}>
               {`${numFormat(output.amount / 1e8, txTicker)} ${txTicker}`}
             </TxInfoRow>
           </View>
@@ -229,24 +282,15 @@ class Screen extends Component {
         case 'tx':
           return (
             <View style={themeStyle.topContainer}>
-              <View style={themeStyle.opacityBackground}>
+              <View style={[themeStyle.opacityBackground, themeStyle.marginToPaddingTop]}>
                 <Text h2>Confirm and sign this transaction from</Text>
-                <Text
-                  bold
-                  style={[themeStyle.schemeOwner, themeStyle.highlightText]}
-                >
+                <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
                   {schemeOwner}
                 </Text>
               </View>
-              <ScrollView style={themeStyle.outputsContainer}>
-                {getOutputs()}
-              </ScrollView>
+              <ScrollView style={themeStyle.outputsContainer}>{getOutputs()}</ScrollView>
               <View
-                style={[
-                  themeStyle.borderTop,
-                  themeStyle.opacityBackground,
-                  { paddingTop: 16 },
-                ]}
+                style={[themeStyle.borderTop, themeStyle.opacityBackground, { paddingTop: 16 }]}
               >
                 <TxInfoRow label="Network Fee:">
                   {`${numFormat(txFee / 1e8, txTicker)} ${txTicker}`}
@@ -258,20 +302,56 @@ class Screen extends Component {
             </View>
           );
 
+        case 'swptx':
+          return (
+            <View style={themeStyle.topContainer}>
+              <View style={[themeStyle.opacityBackground, themeStyle.marginToPaddingTop]}>
+                <Text h2>Confirm private key sweep to</Text>
+                <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
+                  {schemeOwner}
+                </Text>
+              </View>
+              <ScrollView style={themeStyle.outputsContainer}>
+                <View style={[{ paddingBottom: 16 }, createStyleArr(themeStyle.txRow)]}>
+                  <TxInfoRow label="To" labelStyle={themeStyle.labelStyle}>
+                    {swpTxReceiveAddress}
+                  </TxInfoRow>
+                </View>
+
+                {swpTxAddressGroups.map(({ address, satValue }) => (
+                  <View style={{ paddingBottom: 16 }} key={address}>
+                    <TxInfoRow label="From" labelStyle={themeStyle.labelStyle}>
+                      {address}
+                    </TxInfoRow>
+                    <TxInfoRow label="Amount" labelStyle={themeStyle.labelStyle}>
+                      {`${numFormat(satValue / 1e8, swpTxTicker)} ${swpTxTicker}`}
+                    </TxInfoRow>
+                  </View>
+                ))}
+              </ScrollView>
+              <View
+                style={[themeStyle.borderTop, themeStyle.opacityBackground, { paddingTop: 16 }]}
+              >
+                <TxInfoRow label="Network Fee:">
+                  {`${numFormat(swpTxFee / 1e8, swpTxTicker)} ${swpTxTicker}`}
+                </TxInfoRow>
+                <TxInfoRow dark label="Total:">
+                  {`${numFormat(swpTxTotal / 1e8, swpTxTicker)} ${swpTxTicker}`}
+                </TxInfoRow>
+              </View>
+            </View>
+          );
+
         case 'pub':
           return (
             <View style={themeStyle.topContainer}>
               <Text h2>Confirm checkout of public keys to</Text>
-              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
-                {schemeOwner}
-              </Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
               <Text style={{ fontSize: 16, paddingBottom: 16 }}>
-                By signing you agree to send your public keys to the requesting
-                party.
+                By signing you agree to send your public keys to the requesting party.
               </Text>
               <Text style={{ fontSize: 16 }}>
-                Your public keys can only be used to derive addresses and NOT to
-                send funds.
+                Your public keys can only be used to derive addresses and NOT to send funds.
               </Text>
             </View>
           );
@@ -280,17 +360,14 @@ class Screen extends Component {
           return (
             <View style={themeStyle.topContainer}>
               <Text h2>Validate address from</Text>
-              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
-                {schemeOwner}
-              </Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
               <Text style={{ fontSize: 16, paddingBottom: 16 }}>
-                By signing we will lookup a valid receive address. You should do
-                a manual check to see that the same address is displayed on the
-                wallet.
+                By signing we will lookup a valid receive address. You should do a manual check to
+                ensure that the same address is displayed in the wallet.
               </Text>
               <Text style={{ fontSize: 16 }}>
-                Address validation is an extra security measure to ensure that
-                the wallet generates correct receive addresses.
+                Address validation is an extra security measure to ensure that the wallet generates
+                correct receive addresses.
               </Text>
             </View>
           );
@@ -299,9 +376,7 @@ class Screen extends Component {
           return (
             <View style={themeStyle.topContainer}>
               <Text h2>Confirm and sign this message from</Text>
-              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
-                {schemeOwner}
-              </Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
               <Text style={{ fontSize: 16, paddingBottom: 16 }}>Message:</Text>
               <Text
                 style={{
@@ -323,9 +398,7 @@ class Screen extends Component {
           return (
             <View style={themeStyle.topContainer}>
               <Text h2>Confirm that you want to authenticate with</Text>
-              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
-                {schemeOwner}
-              </Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
               <Text style={{ fontSize: 16, paddingBottom: 16 }}>
                 By signing you will login to your wallet.
               </Text>
@@ -336,9 +409,7 @@ class Screen extends Component {
           return (
             <View style={themeStyle.topContainer}>
               <Text h2>Confirm that you want to authenticate with</Text>
-              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>
-                {schemeOwner}
-              </Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
               <Text style={{ fontSize: 16, paddingBottom: 16 }}>
                 By signing you will login to your wallet.
               </Text>
@@ -348,32 +419,55 @@ class Screen extends Component {
         default:
           return (
             <View style={themeStyle.topContainer}>
-              <Text h2>Confirm and sign this</Text>
+              <Text h2>Unsupported request from</Text>
+              <Text style={[themeStyle.schemeOwner, themeStyle.highlightText]}>{schemeOwner}</Text>
+              <Text style={{ fontSize: 16, paddingBottom: 16 }}>
+                Please update to the latest version of the COINiD Vault to handle this request.
+              </Text>
             </View>
           );
       }
     };
 
-    const getFooter = () => (
-      <View
-        style={[themeStyle.bottomContainer, themeStyle.opacityBackground]}
-      >
-        <Button
-          onPress={() => {
-            this._showAuth(false);
-          }}
-          isLoading={isLoading}
-          isLoadingText={isLoadingText}
-        >
-            Sign with PIN
-        </Button>
-      </View>
-    );
+    const getFooter = () => {
+      switch (type) {
+        case 'swptx':
+        case 'tx':
+        case 'pub':
+        case 'val':
+        case '2fa':
+        case 'sah':
+        case 'msg':
+          return (
+            <View
+              style={[
+                themeStyle.bottomContainer,
+                themeStyle.opacityBackground,
+                themeStyle.marginToPaddingBottom,
+              ]}
+            >
+              <Button
+                onPress={() => {
+                  this._showAuth(false);
+                }}
+                isLoading={isLoading}
+                isLoadingText={isLoadingText}
+              >
+                Sign with PIN
+              </Button>
+            </View>
+          );
+        default:
+          return <View />;
+      }
+    };
 
     const getReason = () => {
       switch (type) {
         case 'tx':
           return 'Sign Transaction';
+        case 'swptx':
+          return 'Sign Sweep Transaction';
         case 'pub':
           return 'Checkout Public Keys';
         case '2fa':
@@ -382,6 +476,8 @@ class Screen extends Component {
           return 'Sign Login Request';
         case 'msg':
           return 'Sign Message';
+        case 'val':
+          return 'Validate Address';
         default:
           return 'Sign';
       }
@@ -394,7 +490,9 @@ class Screen extends Component {
       </View>,
       <KeyboardWrapper
         key={2}
-        ref={(c) => { this._keyboard = c; }}
+        ref={(c) => {
+          this._keyboard = c;
+        }}
         type="auth"
         openOnShow={openKeyboardOnShow}
         showTouchId
