@@ -17,21 +17,29 @@ platform :android do
     FileUtils.mkdir_p("#{shRootDir}/#{buildDir}/latest") unless File.directory?("#{shRootDir}/#{buildDir}/latest")
     FileUtils.mkdir_p("#{shRootDir}/#{buildDir}/#{options[:time]}") unless File.directory?("#{shRootDir}/#{buildDir}/#{options[:time]}")
 
+    if options[:tag]
+      FileUtils.mkdir_p("#{shRootDir}/#{buildDir}/release-#{options[:tag]}") unless File.directory?("#{shRootDir}/#{buildDir}/release-#{options[:tag]}")
+    end
+
     gradle(task: "clean assembleRelease")
 
     FileUtils.mv("#{shRootDir}/android/app/build/outputs/apk/release/app-release.apk", "#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk")
     FileUtils.cp("#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk", "#{shRootDir}/#{buildDir}/#{options[:time]}/#{options[:time]}-coinid-vault.apk")
 
-    upload_to_play_store(
-      package_name: (options[:package_name]).to_s,
-      apk: "#{rootDir}/#{buildDir}/latest/latest-coinid-vault.apk",
-      skip_upload_metadata: true,
-      skip_upload_images: true,
-      skip_upload_screenshots: true,
-      track: "beta",
-    )
+    if options[:tag]
+      FileUtils.cp("#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk", "#{shRootDir}/#{buildDir}/release-#{options[:tag]}/#{options[:tag]}-coinid-vault.apk")
+    end
 
-    message_slack(options)
+    #upload_to_play_store(
+    #  package_name: (options[:package_name]).to_s,
+    #  apk: "#{rootDir}/#{buildDir}/latest/latest-coinid-vault.apk",
+    #  skip_upload_metadata: true,
+    #  skip_upload_images: true,
+    #  skip_upload_screenshots: true,
+    #  track: "beta",
+    #)
+#
+    #message_slack(options)
   end
 
 
