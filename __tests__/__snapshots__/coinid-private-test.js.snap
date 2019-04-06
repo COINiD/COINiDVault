@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`bitcoin COINiDPrivate MSG generates correct return data 1`] = `"IGqfHR/PVMDAafnYx0nvyeFabcBpwf120CCpzIfvJlhBA7pceh6zUTYtYF8q2Gb61naZuItvVRMsCMgGvAtErIw="`;
+
+exports[`bitcoin COINiDPrivate MSG generates correct return data 2`] = `"coinid-btc://MSG/IGqfHR/PVMDAafnYx0nvyeFabcBpwf120CCpzIfvJlhBA7pceh6zUTYtYF8q2Gb61naZuItvVRMsCMgGvAtErIw="`;
+
+exports[`bitcoin COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/0'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "bc",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 0,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://btc-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://btc-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 0,
+    "qrScheme": "bitcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "BTC",
+    "title": "Bitcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*0-*0-*0*5+3GO7JP",
+  "ticker": "BTC",
+  "type": "msg",
+}
+`;
+
 exports[`bitcoin COINiDPrivate PUB generates correct return data 1`] = `"49-*0-*0-$xpub6CkbGcMGuz8YPkzfL9r3MrGjazWJYL8rFXKafGTdkFmeMHyLidvaFgWGvkwDTy9ze429K8AiEEoukhyJMw5AvwzwiBH9gjGEk636cnKKKGT"`;
 
 exports[`bitcoin COINiDPrivate PUB generates correct return data 2`] = `"44-*0-*0-$xpub6DP26N4oFK3btF9VGJmG4Dbco1hAu7hwg4TaMvdB3i7FptjZMJYad1iAEi6YTsE9au5CwoLXUwsurDoXeQS9TV6iLES7w74VCei4RpUsf44"`;
@@ -560,6 +616,54 @@ Object {
 }
 `;
 
+exports[`groestlcoin COINiDPrivate MSG generates correct return data 1`] = `"IBBoUR8KwpwrB9EohYzV9f/M+nRXyCEi8kGTGJSKOZPMfubRI0/QDcLzAkPJ3BfGEndJVYv+TkGh40WAMerEAvc="`;
+
+exports[`groestlcoin COINiDPrivate MSG generates correct return data 2`] = `"coinid-grs://MSG/IBBoUR8KwpwrB9EohYzV9f/M+nRXyCEi8kGTGJSKOZPMfubRI0/QDcLzAkPJ3BfGEndJVYv+TkGh40WAMerEAvc="`;
+
+exports[`groestlcoin COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/17'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "grs",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 17,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 36,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 5,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "GRS",
+    "title": "Groestlcoin",
+    "wif": 128,
+  },
+  "ownerCheck": "49-*17-*0-*0*5+3LXPYO",
+  "ticker": "GRS",
+  "type": "msg",
+}
+`;
+
 exports[`groestlcoin COINiDPrivate PUB generates correct return data 1`] = `"49-*17-*0-$xpub6C2to84hFLdu4JMxvaoaSiJ1r9buS5Y7nXQGPSuRRYPWX1ATTwB4zdvZq9XeS3C1Bkv1EJp3zQpW7hLN7N2ZjU2cbD1bHMP1NQ2HaAaFo4S"`;
 
 exports[`groestlcoin COINiDPrivate PUB generates correct return data 2`] = `"44-*17-*0-$xpub6DBEGvvZFPMwFakEFPZ9Xf3MPvVXiBgHrGZrJMwRSoAtKWhUyMSHQsrRYvdftodqdENyoiVXPE9Y2insgH823cXu7sPbLPvVv822VA9nR1Y"`;
@@ -1048,6 +1152,54 @@ Object {
 }
 `;
 
+exports[`groestlcoin-testnet COINiDPrivate MSG generates correct return data 1`] = `"IBCqq4n0DQ8lJQ/VZk+69VcxJQ32KEs0b1dnEjbiRm0AfsVwmmppVcYWCW3m/nOEID8FWpJVyKihbvfJnopEpb4="`;
+
+exports[`groestlcoin-testnet COINiDPrivate MSG generates correct return data 2`] = `"coinid-tgrs://MSG/IBCqq4n0DQ8lJQ/VZk+69VcxJQ32KEs0b1dnEjbiRm0AfsVwmmppVcYWCW3m/nOEID8FWpJVyKihbvfJnopEpb4="`;
+
+exports[`groestlcoin-testnet COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "tgrs",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://blockbook-test.groestlcoin.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "GroestlCoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "groestlcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tGRS",
+    "title": "GRS Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*5+2N7UPZ",
+  "ticker": "tGRS",
+  "type": "msg",
+}
+`;
+
 exports[`groestlcoin-testnet COINiDPrivate PUB generates correct return data 1`] = `"49-*1-*0-$tpubDDJYTZ5AfXWqpqguxVxCES2gszSiGbei96C5hcvecimptwhM6oTnQPFuiuCmBjAKVAamR1P9M4RD2rU74XrcfVy3Kbn8J5FgnLkSD8ZGWQh"`;
 
 exports[`groestlcoin-testnet COINiDPrivate PUB generates correct return data 2`] = `"44-*1-*0-$tpubDDebpBUs3pCHeXVsPgLHBBbPL76cwdEihX6Sdf5TFCheqK8j3WvDQs7SERyzhJXstJAGeryxipbR5BtsRXBy9GrrhJMYnYcxjFhU5nXZXb5"`;
@@ -1533,6 +1685,62 @@ Object {
   "ownerCheck": "49-*1-*0-*0*2+2NA5BU",
   "ticker": "TGRS",
   "type": "val",
+}
+`;
+
+exports[`myriad COINiDPrivate MSG generates correct return data 1`] = `"IFK83t6NlHfb0SPHhdnTdmL0hBFbJf+TEQ4ZVzFT4Kz6GHfTJyrQtOwfIO6ipBMdpd+sO9in21K2NNCST2Vtz9Y="`;
+
+exports[`myriad COINiDPrivate MSG generates correct return data 2`] = `"coinid-xmy://MSG/IFK83t6NlHfb0SPHhdnTdmL0hBFbJf+TEQ4ZVzFT4Kz6GHfTJyrQtOwfIO6ipBMdpd+sO9in21K2NNCST2Vtz9Y="`;
+
+exports[`myriad COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/90'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "my",
+    "bip32": Object {
+      "private": 76066276,
+      "public": 76067358,
+    },
+    "bip44Derivation": 90,
+    "blockTime": 1,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://xmy-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 12,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Myriadcoin Signed Message:
+",
+    "pubKeyHash": 50,
+    "qrScheme": "myriadcoin",
+    "scriptHash": 9,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "XMY",
+    "title": "Myriad",
+    "wif": 178,
+  },
+  "ownerCheck": "49-*90-*0-*0*5+4OV111",
+  "ticker": "XMY",
+  "type": "msg",
 }
 `;
 
@@ -2075,6 +2283,62 @@ Object {
   "ownerCheck": "49-*90-*0-*0*2+4FY57D",
   "ticker": "XMY",
   "type": "val",
+}
+`;
+
+exports[`testnet COINiDPrivate MSG generates correct return data 1`] = `"H1ox+mmOF5Wh0LK8RgRtL5YSoSHt3l03qjEEMVLlJzCkEvUzfbEBClNji+OeJ65NepKHDB3vm99DHGqa5vTi/8w="`;
+
+exports[`testnet COINiDPrivate MSG generates correct return data 2`] = `"coinid-tbtc://MSG/H1ox+mmOF5Wh0LK8RgRtL5YSoSHt3l03qjEEMVLlJzCkEvUzfbEBClNji+OeJ65NepKHDB3vm99DHGqa5vTi/8w="`;
+
+exports[`testnet COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/1'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "tb",
+    "bip32": Object {
+      "private": 70615956,
+      "public": 70617039,
+    },
+    "bip44Derivation": 1,
+    "blockTime": 10,
+    "bridgeParameterArr": Array [
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook1.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook2.coinid.org",
+      ],
+      Array [
+        "blockbook",
+        "wss://testnet-blockbook3.coinid.org",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Bitcoin Signed Message:
+",
+    "pubKeyHash": 111,
+    "qrScheme": "bitcoin",
+    "scriptHash": 196,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+      "P2WPKH",
+    ],
+    "ticker": "tBTC",
+    "title": "Testnet",
+    "wif": 239,
+  },
+  "ownerCheck": "49-*1-*0-*0*5+2N7UPZ",
+  "ticker": "tBTC",
+  "type": "msg",
 }
 `;
 
