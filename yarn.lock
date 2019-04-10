@@ -1568,7 +1568,7 @@ bitcoin-ops@^1.3.0:
 
 "bitcoinjs-lib@https://github.com/wlc-/bitcoinjs-lib":
   version "3.3.0"
-  resolved "https://github.com/wlc-/bitcoinjs-lib#be52a2da0f56beb67a5f502d2ccd4aee9f851618"
+  resolved "https://github.com/wlc-/bitcoinjs-lib#12fd8b3159da10f907e6f19b25dade5ec04f2da7"
   dependencies:
     bech32 "0.0.3"
     bigi "^1.4.0"
@@ -1587,13 +1587,12 @@ bitcoin-ops@^1.3.0:
     varuint-bitcoin "^1.0.4"
     wif "https://github.com/COINiD/wif.git"
 
-bitcoinjs-message@^2.0.0:
+"bitcoinjs-message@https://github.com/COINiD/bitcoinjs-message.git#coinid-version":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/bitcoinjs-message/-/bitcoinjs-message-2.0.0.tgz#e285d223607dabf2b33a6ee486a223b59d1b1548"
+  resolved "https://github.com/COINiD/bitcoinjs-message.git#45ca80585b5ef75d90143171ecb7445f8c355605"
   dependencies:
-    bs58check "^2.0.2"
+    bitcoinjs-lib "https://github.com/wlc-/bitcoinjs-lib"
     buffer-equals "^1.0.3"
-    create-hash "^1.1.2"
     secp256k1 "^3.0.1"
     varuint-bitcoin "^1.0.1"
 
@@ -1724,7 +1723,7 @@ bs58@^4.0.0:
   dependencies:
     base-x "^3.0.2"
 
-bs58check@<3.0.0, bs58check@^2.0.0, bs58check@^2.0.2:
+bs58check@<3.0.0, bs58check@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/bs58check/-/bs58check-2.1.1.tgz#8a5d0e587af97b784bf9cbf1b29f454d82bc0222"
   dependencies:
@@ -1930,12 +1929,12 @@ code-point-at@^1.0.0:
 
 "coinid-private@https://github.com/wlc-/coinid-private":
   version "1.0.1"
-  resolved "https://github.com/wlc-/coinid-private#88d8c6982e2d73da32405de4e3b6a22cbd5ad43a"
+  resolved "https://github.com/wlc-/coinid-private#7cc3ad15bd60a2396d292e59112a41a4fbe4f29d"
   dependencies:
     bip38-async "https://github.com/COINiD/bip38-async"
     bip39 "^2.4.0"
     bitcoinjs-lib "https://github.com/wlc-/bitcoinjs-lib"
-    bitcoinjs-message "^2.0.0"
+    bitcoinjs-message "https://github.com/COINiD/bitcoinjs-message.git#coinid-version"
     coinid-address-types "https://github.com/wlc-/coinid-address-types.git"
     md5 "^2.2.1"
 

@@ -142,5 +142,25 @@ coinArray.forEach((coin) => {
         expect(returnUrl).toMatchSnapshot();
       });
     });
+
+    describe('COINiDPrivate MSG', () => {
+      const { coinid, variant, returnScheme } = getCOINiDFromUrl(COINiDUrls.msg);
+
+      it('parses info correct', () => {
+        expect(coinid.getInfo()).toMatchSnapshot();
+      });
+
+      it('generates correct return data', async () => {
+        const returnData = await coinid.getReturnData(mnemonic);
+        expect(returnData).toMatchSnapshot();
+
+        const returnUrl = coinid.buildReturnUrl({
+          data: returnData,
+          variant,
+          returnScheme,
+        });
+        expect(returnUrl).toMatchSnapshot();
+      });
+    });
   });
 });
