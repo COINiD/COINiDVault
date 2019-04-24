@@ -1688,6 +1688,605 @@ Object {
 }
 `;
 
+exports[`litecoin COINiDPrivate MSG generates correct return data 1`] = `"IKagAYLVC2nVu5DUhOB44v5bM5rX8tiFVVLzxGqVudcADnQmXLoKC/SUmNs/9gHez5hR0XyiQ7tcUTkKZFadEDc="`;
+
+exports[`litecoin COINiDPrivate MSG generates correct return data 2`] = `"coinid-ltc://MSG/IKagAYLVC2nVu5DUhOB44v5bM5rX8tiFVVLzxGqVudcADnQmXLoKC/SUmNs/9gHez5hR0XyiQ7tcUTkKZFadEDc="`;
+
+exports[`litecoin COINiDPrivate MSG parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/2'/0'/0/5",
+  "message": "This is a test message",
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "type": "msg",
+}
+`;
+
+exports[`litecoin COINiDPrivate PUB generates correct return data 1`] = `"49-*2-*0-$Ltub2YYTvNKyh8yoLhi8YEkh7KYvhqT7SMwqKj5pEMWmyZCBP2BBdJMu4EaiDXyABkTipLRwPjegNtGLcAFUMp3aqmeCraBEEbWxbetKiovu3NN"`;
+
+exports[`litecoin COINiDPrivate PUB generates correct return data 2`] = `"44-*2-*0-$Ltub2Yi8jGL6LBQNb9fC8gcXew1E6KwGqfTehtpEvDSNVPzrV4HrkKtdX9XD8tvtkzzyVN7JCnXLMvo1US2PxPAfmPXSqUMSSfQJGiq75kSL4gp"`;
+
+exports[`litecoin COINiDPrivate PUB generates correct return data 3`] = `"84-*2-*0-$Ltub2YThPUFnFPWAFhXHxd8Dwdymw6nJ1cNQJz9Aqrhc5Qo4j9o7sWm35JZ1bGmNnm27b5QbWdk1eRR7yaqGKatArT4noKt8kDWhg7eex9qR5q4"`;
+
+exports[`litecoin COINiDPrivate PUB parses info correct 1`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/49'/2'/0'",
+  ],
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "",
+  "ticker": "LTC",
+  "type": "pub",
+}
+`;
+
+exports[`litecoin COINiDPrivate PUB parses info correct 2`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/44'/2'/0'",
+  ],
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "",
+  "ticker": "LTC",
+  "type": "pub",
+}
+`;
+
+exports[`litecoin COINiDPrivate PUB parses info correct 3`] = `
+Object {
+  "derivationPathArr": Array [
+    "m/84'/2'/0'",
+  ],
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "",
+  "ticker": "LTC",
+  "type": "pub",
+}
+`;
+
+exports[`litecoin COINiDPrivate SAH generates correct return data 1`] = `"unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`litecoin COINiDPrivate SAH generates correct return data 2`] = `"coinid-ltc://SAH/unlock wallet 05ic9gZoNv2xCc6BbmzvWw=="`;
+
+exports[`litecoin COINiDPrivate SAH parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/2'/0'/0/5",
+  "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "type": "sah",
+}
+`;
+
+exports[`litecoin COINiDPrivate SWP generates correct return data 1`] = `"P2PKH*LPffeFLguS1f5B3nsjnEKDT6rgQfWiN5yu*0"`;
+
+exports[`litecoin COINiDPrivate SWP generates correct return data 2`] = `"coinid-ltc://SWP/P2PKH*LPffeFLguS1f5B3nsjnEKDT6rgQfWiN5yu*0"`;
+
+exports[`litecoin COINiDPrivate SWP parses info correct 1`] = `
+Object {
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "type": "swp",
+}
+`;
+
+exports[`litecoin COINiDPrivate SWP parses sweep data correct 1`] = `
+Object {
+  "addresses": Array [
+    Object {
+      "address": "LPffeFLguS1f5B3nsjnEKDT6rgQfWiN5yu",
+      "type": "P2PKH",
+    },
+  ],
+  "compressed": false,
+  "decryptedWif": "6vKqQKaUBcRjVtHCfyEheJ3zwFQ1xcjs7tWdCN1akFd9TgSLogF",
+  "encryptedWif": undefined,
+  "params": Object {},
+}
+`;
+
+exports[`litecoin COINiDPrivate SWPTX generates correct return data 1`] = `"010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008A473044022024E433C0B9B9BAD863A4D5A677D831D985CE430FF8C82E794042E5F51388845D022043D3CE3BACF82A27B2438AF764D6261DEB794A81FD8437D091AB6791A0DC0268014104CD2E808442C76F489473D736A771106D00ADE8D8BFF25A310FC2D51BD0397101743A842B589B49567C8D1D833EB9D9C2AE40181449760EA667C1FEE0AA1B0796FFFFFFFF01B8410F000000000017A9140361B606EC9B935BAC7702FF8D3DA5A0127164FD8700000000"`;
+
+exports[`litecoin COINiDPrivate SWPTX generates correct return data 2`] = `"coinid-ltc://SWPTX/010000000156054AE5990EAE038E00372954FEE8B130ACCEEE98936A69BED23A45E7A084AD010000008A473044022024E433C0B9B9BAD863A4D5A677D831D985CE430FF8C82E794042E5F51388845D022043D3CE3BACF82A27B2438AF764D6261DEB794A81FD8437D091AB6791A0DC0268014104CD2E808442C76F489473D736A771106D00ADE8D8BFF25A310FC2D51BD0397101743A842B589B49567C8D1D833EB9D9C2AE40181449760EA667C1FEE0AA1B0796FFFFFFFF01B8410F000000000017A9140361B606EC9B935BAC7702FF8D3DA5A0127164FD8700000000"`;
+
+exports[`litecoin COINiDPrivate SWPTX parses info correct 1`] = `
+Object {
+  "inputInfoArr": Array [
+    Object {
+      "address": "LPffeFLguS1f5B3nsjnEKDT6rgQfWiN5yu",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "outputInfo": Object {
+    "address": "M8D3K64DHZbR7GiSP9HCHfQCdkHLC8arZY",
+    "derivationPath": "m/49'/2'/0'/0/5",
+    "satValue": 999864,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "type": "swptx",
+}
+`;
+
+exports[`litecoin COINiDPrivate SWPTX parses transaction info correct 1`] = `
+Object {
+  "fee": 136,
+  "inputs": Array [
+    Object {
+      "address": "LPffeFLguS1f5B3nsjnEKDT6rgQfWiN5yu",
+      "hash": "ad84a0e7453ad2be696a9398eeceac30b1e8fe542937008e03ae0e99e54a0556",
+      "index": 1,
+      "satValue": 1000000,
+      "type": "P2PKH",
+    },
+  ],
+  "outputSat": 999864,
+  "receiveAddress": "M8D3K64DHZbR7GiSP9HCHfQCdkHLC8arZY",
+  "receiveDerivationPath": "m/49'/2'/0'/0/5",
+  "total": 1000000,
+}
+`;
+
+exports[`litecoin COINiDPrivate TX generates correct return data 1`] = `"01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600146A238081E804BB0E48EC782BBF692A7E4D283D9300000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000171600142B9E46C08C2AE35BD22AFD5D2F9C40BCA4C99CE00000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF77362870247304402201C3253F5F64232A64F33FF36861FCB910D5C62A2C1DB89B80025D2EEF71A5D8D0220273FC6D74BE88B5BFDC9D840B9F3F710E17FBCE86E836C15D016AD3296CCCFF2012103E0E694A6DC947AA79B7758A0FC25EB71B14CE1275B84D9EC22449C5C0CEDAB1902473044022032C26F213BF72A8BC366CE77C011D9A0CCF43CF710969A6AF3AD9C2FA63453EA022024E8F027E6F593D5E3A1437D1ED0496F9672A5BEAEA0A9E88CBCE03FCE5B752F012103368A7B7CF24663D3E8C1311E681D946F9BB9EFAE982FEC96D91F708547E2725D00000000"`;
+
+exports[`litecoin COINiDPrivate TX generates correct return data 2`] = `"coinid-ltc://TX/01000000000102A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C02000000171600146A238081E804BB0E48EC782BBF692A7E4D283D9300000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000171600142B9E46C08C2AE35BD22AFD5D2F9C40BCA4C99CE00000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF77362870247304402201C3253F5F64232A64F33FF36861FCB910D5C62A2C1DB89B80025D2EEF71A5D8D0220273FC6D74BE88B5BFDC9D840B9F3F710E17FBCE86E836C15D016AD3296CCCFF2012103E0E694A6DC947AA79B7758A0FC25EB71B14CE1275B84D9EC22449C5C0CEDAB1902473044022032C26F213BF72A8BC366CE77C011D9A0CCF43CF710969A6AF3AD9C2FA63453EA022024E8F027E6F593D5E3A1437D1ED0496F9672A5BEAEA0A9E88CBCE03FCE5B752F012103368A7B7CF24663D3E8C1311E681D946F9BB9EFAE982FEC96D91F708547E2725D00000000"`;
+
+exports[`litecoin COINiDPrivate TX parses info correct 1`] = `
+Object {
+  "changeOutputIndexArr": Array [
+    4,
+  ],
+  "inputDerivationPathArr": Array [
+    "m/49'/0'/0'/0/5",
+    "m/49'/0'/0'/1/2",
+  ],
+  "inputValueArr": Array [
+    369796,
+    430000,
+  ],
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "txHex": "0100000002A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C020000000000000000A06364D80225EA2181D41AD469B2D5560E594F2C783BBB41CAAA652B493A104C01000000000000000005400D03000000000017A914A89F3493631D141E847A15CB3BA68234CC6ACC2E87B08F0600000000001976A9147E6257D509CCDD623F4AB33416F17A44A0A5F7BC88AC10270000000000001600147E6257D509CCDD623F4AB33416F17A44A0A5F7BC307500000000000017A91461F05801F6931D95CD0180917B6CACF84C767E818738FA01000000000017A914CD05CE4F0D4B88D2E00A9FE7CF3AA8FEEAF773628700000000",
+  "type": "tx",
+}
+`;
+
+exports[`litecoin COINiDPrivate TX parses transaction info correct 1`] = `
+Object {
+  "allInputTotal": 799796,
+  "allOutputTotal": 799592,
+  "allOutputs": Array [
+    Object {
+      "address": "MPGkUSXoLjuiRBiK6TcVdAJZv96QsStVq7",
+      "amount": 200000,
+    },
+    Object {
+      "address": "LWkDDP665JSdLotrRK71ZoKQEb22PafzPN",
+      "amount": 430000,
+    },
+    Object {
+      "address": "ltc1q0e3904gfenwky062kv6pdut6gjs2taaucfdcr6",
+      "amount": 10000,
+    },
+    Object {
+      "address": "MGq1hR6nbp9SmeGJmsTUscheLPDfgswXxo",
+      "amount": 30000,
+    },
+    Object {
+      "address": "MSbDiA11kmSTXoe8kVFfnn1kB38KLVyuZM",
+      "amount": 129592,
+    },
+  ],
+  "changeOutputs": Array [
+    Object {
+      "address": "MSbDiA11kmSTXoe8kVFfnn1kB38KLVyuZM",
+      "amount": 129592,
+    },
+  ],
+  "changeTotal": 129592,
+  "externalOutputs": Array [
+    Object {
+      "address": "MPGkUSXoLjuiRBiK6TcVdAJZv96QsStVq7",
+      "amount": 200000,
+    },
+    Object {
+      "address": "LWkDDP665JSdLotrRK71ZoKQEb22PafzPN",
+      "amount": 430000,
+    },
+    Object {
+      "address": "ltc1q0e3904gfenwky062kv6pdut6gjs2taaucfdcr6",
+      "amount": 10000,
+    },
+    Object {
+      "address": "MGq1hR6nbp9SmeGJmsTUscheLPDfgswXxo",
+      "amount": 30000,
+    },
+  ],
+  "externalTotal": 670000,
+  "fee": 204,
+}
+`;
+
+exports[`litecoin COINiDPrivate VAL generates correct return data 1`] = `"M87hu7iAZARauYjbEwNMV6W2CHdvx16HFB"`;
+
+exports[`litecoin COINiDPrivate VAL parses info correct 1`] = `
+Object {
+  "derivationPath": "m/49'/0'/0'/0/2",
+  "network": Object {
+    "bech32": "ltc",
+    "bip32": Object {
+      "private": 27106558,
+      "public": 27108450,
+    },
+    "bip44Derivation": 2,
+    "blockTime": 2.5,
+    "bridgeParameterArr": Array [
+      Array [
+        "insight",
+        "https://ltc-bitcore1.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore2.coinid.org/api",
+      ],
+      Array [
+        "insight",
+        "https://ltc-bitcore3.coinid.org/api",
+      ],
+    ],
+    "confirmations": 6,
+    "hashFunctions": Object {
+      "address": [Function],
+      "message": [Function],
+      "transaction": [Function],
+    },
+    "messagePrefix": "Litecoin Signed Message:
+",
+    "pubKeyHash": 48,
+    "qrScheme": "litecoin",
+    "scriptHash": 50,
+    "supportedAddressTypes": Array [
+      "P2SH-P2WPKH",
+      "P2PKH",
+    ],
+    "ticker": "LTC",
+    "title": "Litecoin",
+    "wif": 176,
+  },
+  "ownerCheck": "49-*2-*0-*0*5+M8D3K6",
+  "ticker": "LTC",
+  "type": "val",
+}
+`;
+
 exports[`myriad COINiDPrivate MSG generates correct return data 1`] = `"IFK83t6NlHfb0SPHhdnTdmL0hBFbJf+TEQ4ZVzFT4Kz6GHfTJyrQtOwfIO6ipBMdpd+sO9in21K2NNCST2Vtz9Y="`;
 
 exports[`myriad COINiDPrivate MSG generates correct return data 2`] = `"coinid-xmy://MSG/IFK83t6NlHfb0SPHhdnTdmL0hBFbJf+TEQ4ZVzFT4Kz6GHfTJyrQtOwfIO6ipBMdpd+sO9in21K2NNCST2Vtz9Y="`;

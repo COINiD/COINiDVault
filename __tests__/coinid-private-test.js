@@ -1,7 +1,14 @@
 import COINiDPrivate from 'coinid-private';
 import { getCoinIdDataFromUrl } from '../src/utils/coinid';
 
-const coinArray = ['testnet', 'myriad', 'bitcoin', 'groestlcoin', 'groestlcoin-testnet'];
+const coinArray = [
+  'testnet',
+  'myriad',
+  'bitcoin',
+  'groestlcoin',
+  'groestlcoin-testnet',
+  'litecoin',
+];
 
 coinArray.forEach((coin) => {
   describe(coin, () => {
