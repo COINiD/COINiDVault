@@ -30,16 +30,16 @@ platform :android do
       FileUtils.cp("#{shRootDir}/#{buildDir}/latest/latest-coinid-vault.apk", "#{shRootDir}/#{buildDir}/release-#{options[:tag]}/#{options[:tag]}-coinid-vault.apk")
     end
 
-    #upload_to_play_store(
-    #  package_name: (options[:package_name]).to_s,
-    #  apk: "#{rootDir}/#{buildDir}/latest/latest-coinid-vault.apk",
-    #  skip_upload_metadata: true,
-    #  skip_upload_images: true,
-    #  skip_upload_screenshots: true,
-    #  track: "beta",
-    #)
-#
-    #message_slack(options)
+    upload_to_play_store(
+      package_name: (options[:package_name]).to_s,
+      apk: "#{rootDir}/#{buildDir}/latest/latest-coinid-vault.apk",
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      track: "beta",
+    )
+
+    message_slack(options)
   end
 
 
