@@ -1929,7 +1929,7 @@ code-point-at@^1.0.0:
 
 "coinid-private@https://github.com/wlc-/coinid-private":
   version "1.0.1"
-  resolved "https://github.com/wlc-/coinid-private#7cc3ad15bd60a2396d292e59112a41a4fbe4f29d"
+  resolved "https://github.com/wlc-/coinid-private#25fda2b247acf7fa462b7dbda1931929746406f6"
   dependencies:
     bip38-async "https://github.com/COINiD/bip38-async"
     bip39 "^2.4.0"

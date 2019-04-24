@@ -60,6 +60,8 @@ class Screen extends Component {
       switch (returnScheme) {
         case 'coinid-test':
           return 'COINiD TEST';
+        case 'coinid-ltc':
+          return 'Litecoin Wallet for COINiD';
         case 'coinid-btc':
           return 'Bitcoin Wallet for COINiD';
         case 'coinid-tbtc':
