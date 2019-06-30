@@ -250,7 +250,9 @@ export default class PrivateKeyPassword extends PureComponent {
       return (
         <View style={styles.passwordHintWrapper}>
           <Text style={styles.passwordHintHeader}>Password hint:</Text>
-          <Text style={styles.passwordHint}>{hint}</Text>
+          <Text style={styles.passwordHint} selectable>
+            {hint}
+          </Text>
         </View>
       );
     }
