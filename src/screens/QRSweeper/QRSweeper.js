@@ -1,7 +1,11 @@
 import React, { PureComponent } from 'react';
-import { Text, View, Alert } from 'react-native';
+import {
+  Text, View, Alert, Clipboard,
+} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 import { Icon } from 'react-native-elements';
+
+import { connectActionSheet } from '@expo/react-native-action-sheet';
 
 import { PrivateKeyPassword } from '../../dialogs';
 
@@ -147,6 +151,31 @@ class QRSweeper extends PureComponent {
     });
   };
 
+  _showOptions = () => {
+    const { showActionSheetWithOptions } = this.props;
+
+    const options = ['Parse clipboard data', 'Cancel'];
+    const cancelButtonIndex = 1;
+
+    showActionSheetWithOptions(
+      {
+        options,
+        cancelButtonIndex,
+      },
+      async (buttonIndex) => {
+        if (buttonIndex === 0) {
+          const data = await Clipboard.getString();
+
+          try {
+            this._onRead({ data });
+          } catch (err) {
+            Alert.alert('Parse error', 'Could not find private key in clipboard');
+          }
+        }
+      },
+    );
+  };
+
   _renderCustomMarker = () => (
     <View style={[styles.markerContainer, styles.boxShadow]}>
       <View style={[styles.markerCorner, styles.markerTopLeft, styles.boxShadow]} />
@@ -192,14 +221,24 @@ class QRSweeper extends PureComponent {
             </React.Fragment>
 )}
           bottomContent={(
-            <Icon
-              containerStyle={[styles.iconContainer, { transform: [{ rotate: '90deg' }] }]}
-              name="autorenew"
-              onPress={this._flipCamera}
-              size={32}
-              color="white"
-              underlayColor="transparent"
-            />
+            <React.Fragment>
+              <Icon
+                containerStyle={[styles.iconContainer, { transform: [{ rotate: '90deg' }] }]}
+                name="autorenew"
+                onPress={this._flipCamera}
+                size={32}
+                color="white"
+                underlayColor="transparent"
+              />
+              <Icon
+                containerStyle={[styles.iconContainer]}
+                name="more-horiz"
+                onPress={this._showOptions}
+                size={32}
+                color="white"
+                underlayColor="transparent"
+              />
+            </React.Fragment>
 )}
         />
       );
@@ -221,4 +260,4 @@ class QRSweeper extends PureComponent {
 
 QRSweeper.propTypes = {};
 
-export default QRSweeper;
+export default connectActionSheet(QRSweeper);
