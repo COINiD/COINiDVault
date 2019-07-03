@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StatusBar, Platform } from 'react-native';
+import { ActionSheetProvider } from '@expo/react-native-action-sheet';
 import { HomeStack } from './config/routes';
 
 export default class COINiD extends Component {
@@ -8,12 +9,16 @@ export default class COINiD extends Component {
 
     StatusBar.setHidden(false);
     StatusBar.setBarStyle('dark-content');
-    if(Platform.OS === 'android') {
+    if (Platform.OS === 'android') {
       StatusBar.setTranslucent(true);
     }
   }
 
   render() {
-    return <HomeStack />;
+    return (
+      <ActionSheetProvider>
+        <HomeStack />
+      </ActionSheetProvider>
+    );
   }
 }
