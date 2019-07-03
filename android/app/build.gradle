@@ -127,8 +127,8 @@ android {
         applicationId "org.coinid.vault"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 68
-        versionName "1.5.1"
+        versionCode 70
+        versionName "1.5.2"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
