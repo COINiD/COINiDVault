@@ -4,19 +4,16 @@ import PropTypes from 'prop-types';
 import { Linking, View, Alert } from 'react-native';
 import { Icon, List, ListItem } from 'react-native-elements';
 
-import { NavigationActions } from 'react-navigation';
-
-import { Button, Loading, Text, KeyboardWrapper } from '../../components';
+import { Loading, Text, KeyboardWrapper } from '../../components';
 
 import { colors } from '../../config/styling';
 import { settings } from '../../config/settings';
 
 import styles from './styles';
 
-import { removeMnemonic, loadMnemonic } from '../../utils/mnemonic';
-
 class Screen extends PureComponent {
   themeStyle = '';
+
   theme = '';
 
   constructor(props): void {
@@ -36,12 +33,10 @@ class Screen extends PureComponent {
 
   getChildContext = () => ({ theme: this.theme });
 
-  _about = () => {
-    return Linking.openURL(settings.aboutUrl);
-  };
+  _about = () => Linking.openURL(settings.aboutUrl);
 
-  _updatePIN = pin => {
-    this.props.navigation.navigate('UpdatePIN', { pin: pin, theme: 'dark' });
+  _updatePIN = (pin) => {
+    this.props.navigation.navigate('UpdatePIN', { pin, theme: 'dark' });
   };
 
   _showUpdatePINAuth = () => {
@@ -53,47 +48,42 @@ class Screen extends PureComponent {
     this._p2pKeyboard._showKeyboard();
   };
 
-  _resetCOINiDConfirmed = () => {
-    removeMnemonic().then(() => {
-      this.props.navigation.state.params.onReady();
-      this.props.navigation.goBack();
-    });
-  }
-
-  _resetCoinId = () => {
-    Alert.alert(
-      'Are you sure?',
-      'This will delete the stored mnemonic, make sure you have a backup...',
-      [
-        {text: 'Cancel', onPress: () => {}, style: 'cancel'},
-        {text: 'OK', onPress: () => this._resetCOINiDConfirmed() },
-      ],
-      { cancelable: true }
-    )
-
+  _resetCoinId = (pin) => {
+    const { navigation } = this.props;
+    navigation.navigate('Reset', { onReady: navigation.state.params.onReady, pin, theme: 'dark' });
   };
 
-  _backupCoinId = pin => {
-    this.props.navigation.navigate('Backup', { pin: pin, theme: 'dark' });
+  _showResetAuth = () => {
+    this.setState({
+      authReason: 'Reset Mnemonic',
+      authInfo: '',
+      authCallback: this._resetCoinId,
+    });
+    this._p2pKeyboard._showKeyboard();
+  };
+
+  _backupCoinId = (pin) => {
+    const { navigation } = this.props;
+    navigation.navigate('Backup', { pin, theme: 'dark' });
   };
 
   _showBackupAuth = () => {
     this.setState({
-      authReason: 'Backup mnemonic',
+      authReason: 'Backup Mnemonic',
       authInfo: '',
       authCallback: this._backupCoinId,
     });
     this._p2pKeyboard._showKeyboard();
   };
 
-  render = function() {
-    const themeStyle = this.themeStyle;
+  render() {
+    const { themeStyle } = this;
 
     if (this.state.isLoading) {
       return <Loading />;
     }
 
-    const settings = [
+    const settingItems = [
       {
         title: 'Update PIN',
         onPress: this._showUpdatePINAuth,
@@ -105,8 +95,7 @@ class Screen extends PureComponent {
       {
         title: 'Reset',
         titleStyle: [themeStyle.listItemTitle, themeStyle.warningText],
-        onPress: this._resetCoinId,
-        hideChevron: true,
+        onPress: this._showResetAuth,
       },
       {
         title: 'About',
@@ -116,53 +105,56 @@ class Screen extends PureComponent {
       },
     ];
 
-    const getSettings = () => {
-      return (
-        <View key={1} style={themeStyle.container}>
-          <View style={themeStyle.topContainer}>
-            <Icon
-              size={24}
-              name="arrow-left"
-              type="material-community"
-              containerStyle={[themeStyle.topIcon, themeStyle.topIconLeft]}
-              onPress={() => this.props.navigation.goBack()}
-              hitSlop={{ top: 20, bottom: 20, left: 20, right: 20 }}
-            />
-            <Text h1>Settings</Text>
-            <List containerStyle={themeStyle.list}>
-              {settings.map((item, i) => (
-                <ListItem
-                  key={i}
-                  containerStyle={themeStyle.listItem}
-                  titleStyle={themeStyle.listItemTitle}
-                  wrapperStyle={themeStyle.listItemTitleContainer}
-                  title={item.title}
-                  onPress={item.onPress}
-                  rightIcon={{
-                    color: colors.getTheme(this.theme).text,
-                  }}
-                  {...item}
-                />
-              ))}
-            </List>
-          </View>
+    const getSettings = () => (
+      <View key={1} style={themeStyle.container}>
+        <View style={themeStyle.topContainer}>
+          <Icon
+            size={24}
+            name="arrow-left"
+            type="material-community"
+            containerStyle={[themeStyle.topIcon, themeStyle.topIconLeft]}
+            onPress={() => this.props.navigation.goBack()}
+            hitSlop={{
+              top: 20,
+              bottom: 20,
+              left: 20,
+              right: 20,
+            }}
+          />
+          <Text h1>Settings</Text>
+          <List containerStyle={themeStyle.list}>
+            {settingItems.map((item, i) => (
+              <ListItem
+                key={i}
+                containerStyle={themeStyle.listItem}
+                titleStyle={themeStyle.listItemTitle}
+                wrapperStyle={themeStyle.listItemTitleContainer}
+                title={item.title}
+                onPress={item.onPress}
+                rightIcon={{
+                  color: colors.getTheme(this.theme).text,
+                }}
+                {...item}
+              />
+            ))}
+          </List>
         </View>
-      );
-    };
+      </View>
+    );
 
     return [
       getSettings(),
       <KeyboardWrapper
         key={2}
-        type={'auth'}
-        showTouchId={true}
+        type="auth"
+        showTouchId
         infoMessage={this.state.authInfo}
         reasonMessage={this.state.authReason}
-        ref={(c) => this._p2pKeyboard = c}
+        ref={c => (this._p2pKeyboard = c)}
         onValid={this.state.authCallback}
       />,
     ];
-  };
+  }
 }
 
 Screen.childContextTypes = {
