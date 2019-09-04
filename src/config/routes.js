@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import {
   Main,
@@ -13,6 +11,7 @@ import {
   QRDataReceiver,
   QRDataSender,
   QRSweeper,
+  Reset,
 } from '../screens';
 
 export const HomeStack = createStackNavigator(
@@ -22,6 +21,7 @@ export const HomeStack = createStackNavigator(
     Recover: { screen: Recover },
     Settings: { screen: Settings },
     Backup: { screen: Backup },
+    Reset: { screen: Reset },
     Sign: { screen: Sign },
     QRSweeper: { screen: QRSweeper },
     UpdatePIN: { screen: UpdatePIN },

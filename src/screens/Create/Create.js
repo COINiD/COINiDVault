@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { Button, Text, SetPin } from '../../components';
+import VerifyMnemonic from '../../components/VerifyMnemonic';
 
 import styles from './styles';
 import { colors } from '../../config/styling';
@@ -28,7 +29,7 @@ class Screen extends Component {
       mnemonicCount: 0,
       mnemonicWord: '',
       mnemonic: '',
-      setPin: false,
+      subScreen: 'generate',
     };
 
     generateMnemonic().then((mnemonic) => {
@@ -38,12 +39,30 @@ class Screen extends Component {
         mnemonic,
         mnemonicCount: 0,
         mnemonicWord: this.mnemonicArr[0],
-        setPin: false,
+        subScreen: 'generate',
       });
     });
   }
 
   getChildContext = () => ({ theme: this.theme });
+
+  showGenerate = () => {
+    this.setState({
+      subScreen: 'generate',
+    });
+  };
+
+  showVerifyMnemonic = () => {
+    this.setState({
+      subScreen: 'verifyMnemonic',
+    });
+  };
+
+  showSetPin = () => {
+    this.setState({
+      subScreen: 'setPin',
+    });
+  };
 
   prevWord = () => {
     const i = this.state.mnemonicCount - 1;
@@ -65,10 +84,8 @@ class Screen extends Component {
         mnemonicWord: this.mnemonicArr[i],
       });
     } else {
-      // go to set pin instead!
-      this.setState({
-        setPin: true,
-      });
+      // go to verifyMnemonic instead!
+      this.showVerifyMnemonic();
     }
   };
 
@@ -88,26 +105,48 @@ class Screen extends Component {
   };
 
   pinCancel = () => {
-    this.setState({
-      setPin: false,
-    });
+    this.showVerifyMnemonic();
+  };
+
+  verifySuccess = () => {
+    this.showSetPin();
+  };
+
+  verifyCancel = () => {
+    this.showGenerate();
   };
 
   _return = () => {
-    this.props.navigation.state.params.onReady();
-    this.props.navigation.goBack();
+    const { navigation } = this.props;
+
+    navigation.state.params.onReady();
+    navigation.goBack();
   };
 
   render() {
     const themeStyle = this.themeStyle;
+    const { subScreen } = this.state;
 
-    if (this.state.setPin) {
+    if (subScreen === 'setPin') {
       return (
         <SetPin
           title="Create COINiD Vault"
           themeStyle={themeStyle}
           onSuccess={this.pinSuccess}
           onCancel={this.pinCancel}
+        />
+      );
+    }
+
+    if (subScreen === 'verifyMnemonic') {
+      return (
+        <VerifyMnemonic
+          mnemonicArr={this.mnemonicArr}
+          onSuccess={this.verifySuccess}
+          onCancel={this.verifyCancel}
+          onClose={this._return}
+          stepAfterText="Set PIN"
+          verifyText="Enter the following words from the recovery phrase."
         />
       );
     }
@@ -120,7 +159,7 @@ class Screen extends Component {
             name="close"
             color={colors.getTheme().text}
             containerStyle={themeStyle.topIcon}
-            onPress={this._return.bind(this)}
+            onPress={this._return}
             underlayColor="transparent"
             hitSlop={{
               top: 20,
@@ -135,10 +174,7 @@ class Screen extends Component {
             order.
           </Text>
           <Text style={themeStyle.mnemonicCount}>
-            {this.state.mnemonicCount + 1}
-            {' '}
-of
-            {this.mnemonicArr.length}
+            {`${this.state.mnemonicCount + 1} of ${this.mnemonicArr.length}`}
           </Text>
           <Text h1 style={themeStyle.mnemonicWord}>
             {this.state.mnemonicWord}
@@ -162,7 +198,9 @@ of
             Prev Word
           </Button>
           <Button style={themeStyle.wordButton} onPress={this.nextWord}>
-            {this.state.mnemonicCount == this.mnemonicArr.length - 1 ? 'Set PIN' : 'Next Word'}
+            {this.state.mnemonicCount == this.mnemonicArr.length - 1
+              ? 'Verify Phrase'
+              : 'Next Word'}
           </Button>
         </View>
       </View>

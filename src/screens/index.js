@@ -8,3 +8,4 @@ export { default as Sign } from './Sign';
 export { default as QRDataReceiver } from './QRDataReceiver';
 export { default as QRDataSender } from './QRDataSender';
 export { default as QRSweeper } from './QRSweeper';
+export { default as Reset } from './Reset';
