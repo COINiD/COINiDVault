@@ -45,7 +45,7 @@ platform :android do
 
   lane :message_slack do |options|
     slack(
-      message: "New #{options[:coin]} Vault coming to Play Store!",
+      message: "New Vault coming to Play Store!",
       default_payloads: [],
       slack_url: ENV['SLACK_URL']
     )
