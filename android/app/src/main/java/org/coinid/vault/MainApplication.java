@@ -3,6 +3,7 @@ package org.coinid.vault;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.corbt.keepawake.KCKeepAwakePackage;
 import org.reactnative.camera.RNCameraPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -11,7 +12,6 @@ import org.coinid.rctp2ptransferperipheral.RCTP2PTransferBLEPeripheralPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
-import com.peel.react.rnos.RNOSModule;
 import com.oblador.keychain.KeychainPackage;
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactNativeHost;
@@ -34,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AsyncStoragePackage(),
             new KCKeepAwakePackage(),
             new RNCameraPackage(),
             new SplashScreenReactPackage(),
@@ -42,7 +43,6 @@ public class MainApplication extends Application implements ReactApplication {
             new VectorIconsPackage(),
             new SvgPackage(),
             new RandomBytesPackage(),
-            new RNOSModule(),
             new KeychainPackage(),
             new LottiePackage()
       );
