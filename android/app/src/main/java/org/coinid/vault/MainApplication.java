@@ -3,9 +3,9 @@ package org.coinid.vault;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.reactnative.camera.RNCameraPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.corbt.keepawake.KCKeepAwakePackage;
-import org.reactnative.camera.RNCameraPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.rnfingerprint.FingerprintAuthPackage;
 import org.coinid.rctp2ptransferperipheral.RCTP2PTransferBLEPeripheralPackage;
@@ -34,9 +34,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNCameraPackage(),
             new AsyncStoragePackage(),
             new KCKeepAwakePackage(),
-            new RNCameraPackage(),
             new SplashScreenReactPackage(),
             new FingerprintAuthPackage(),
             new RCTP2PTransferBLEPeripheralPackage(),
