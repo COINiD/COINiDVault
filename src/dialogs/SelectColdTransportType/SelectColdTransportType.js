@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { View, AsyncStorage } from 'react-native';
+import { View } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import {
   DetailsModal, Text, Button, CheckBoxSelect,
 } from '../../components';
@@ -10,15 +11,18 @@ export default class SelectColdTransportType extends PureComponent {
   constructor(props) {
     super(props);
 
-    const selectData = [{
-      title: 'QR Code',
-      description: 'Uses QR Codes to communicate between wallet and offline device.',
-      returnValue: 'qr',
-    }, {
-      title: 'Bluetooth Low Energy',
-      description: 'Uses BLE to communicate between wallet and offline device.',
-      returnValue: 'ble',
-    }];
+    const selectData = [
+      {
+        title: 'QR Code',
+        description: 'Uses QR Codes to communicate between wallet and offline device.',
+        returnValue: 'qr',
+      },
+      {
+        title: 'Bluetooth Low Energy',
+        description: 'Uses BLE to communicate between wallet and offline device.',
+        returnValue: 'ble',
+      },
+    ];
 
     this.state = {
       selectedIndex: 0,
@@ -27,18 +31,17 @@ export default class SelectColdTransportType extends PureComponent {
   }
 
   componentDidMount() {
-    AsyncStorage.getItem('@SelectColdTransportType:returnValue')
-      .then((data) => {
-        if (data !== null) {
-          const { selectData } = this.state;
-          const returnValue = JSON.parse(data);
-          const selectedIndex = selectData.map(e => e.returnValue).indexOf(returnValue);
+    AsyncStorage.getItem('@SelectColdTransportType:returnValue').then((data) => {
+      if (data !== null) {
+        const { selectData } = this.state;
+        const returnValue = JSON.parse(data);
+        const selectedIndex = selectData.map(e => e.returnValue).indexOf(returnValue);
 
-          if (selectedIndex !== -1) {
-            this.setState({ selectedIndex });
-          }
+        if (selectedIndex !== -1) {
+          this.setState({ selectedIndex });
         }
-      });
+      }
+    });
   }
 
   _open = (onSelectCb) => {
@@ -65,7 +68,7 @@ export default class SelectColdTransportType extends PureComponent {
 
   _save = (returnValue) => {
     AsyncStorage.setItem('@SelectColdTransportType:returnValue', JSON.stringify(returnValue));
-  }
+  };
 
   render() {
     const { selectedIndex, selectData } = this.state;
@@ -84,7 +87,9 @@ export default class SelectColdTransportType extends PureComponent {
           </Text>
           <View style={{ marginTop: 16 }}>
             <CheckBoxSelect
-              onIndexChange={(newIndex) => { this.setState({ selectedIndex: newIndex }); }}
+              onIndexChange={(newIndex) => {
+                this.setState({ selectedIndex: newIndex });
+              }}
               selectedIndex={selectedIndex}
               data={selectData}
             />

@@ -1,16 +1,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Alert,
-  AsyncStorage,
-} from 'react-native';
+import { Alert } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
+
 import * as Animatable from 'react-native-animatable';
 import TouchID from 'react-native-touch-id';
 
-import {
-  Text, PinKeyboard, PinInput,
-} from '..';
+import { Text, PinKeyboard, PinInput } from '..';
 import { checkPin, getPin } from '../../utils/pin';
 
 import styles from './styles';
@@ -44,10 +41,7 @@ class AuthKeyboard extends PureComponent {
   constructor(props): void {
     super(props);
 
-    this.lockoutTimeSettings = [
-      1 * 60 * 1000,
-      5 * 60 * 1000,
-    ];
+    this.lockoutTimeSettings = [1 * 60 * 1000, 5 * 60 * 1000];
 
     this.pinLockoutCount = 0;
 
@@ -72,36 +66,34 @@ class AuthKeyboard extends PureComponent {
       clearTimeout(this.countdownTimer);
       this.countdownTimer = undefined;
     }
-  }
+  };
 
   _loadLockoutData = () => {
-    AsyncStorage.getItem('@AuthKeyboard:lockoutUntil')
-      .then((data) => {
-        if (data !== null) {
-          const lockoutUntil = JSON.parse(data);
-          const pinLockoutTime = lockoutUntil - Date.now();
+    AsyncStorage.getItem('@AuthKeyboard:lockoutUntil').then((data) => {
+      if (data !== null) {
+        const lockoutUntil = JSON.parse(data);
+        const pinLockoutTime = lockoutUntil - Date.now();
 
-          if (pinLockoutTime > 0) {
-            this._startCountdown(pinLockoutTime);
-          }
+        if (pinLockoutTime > 0) {
+          this._startCountdown(pinLockoutTime);
         }
-      });
+      }
+    });
 
-    AsyncStorage.getItem('@AuthKeyboard:pinLockoutCount')
-      .then((data) => {
-        if (data !== null) {
-          const pinLockoutCount = JSON.parse(data);
-          this.pinLockoutCount = pinLockoutCount;
-        }
-      });
-  }
+    AsyncStorage.getItem('@AuthKeyboard:pinLockoutCount').then((data) => {
+      if (data !== null) {
+        const pinLockoutCount = JSON.parse(data);
+        this.pinLockoutCount = pinLockoutCount;
+      }
+    });
+  };
 
   _saveLockoutData = (lockoutUntil, pinLockoutCount) => {
     this.pinLockoutCount = pinLockoutCount;
 
     AsyncStorage.setItem('@AuthKeyboard:lockoutUntil', JSON.stringify(lockoutUntil));
     AsyncStorage.setItem('@AuthKeyboard:pinLockoutCount', JSON.stringify(pinLockoutCount));
-  }
+  };
 
   _countdownTick = () => {
     let { pinLockoutTime } = this.state;
@@ -118,7 +110,7 @@ class AuthKeyboard extends PureComponent {
     this.setState({
       pinLockoutTime,
     });
-  }
+  };
 
   _startCountdown = (forcePinLockoutTime) => {
     let pinLockoutTime;
@@ -137,9 +129,12 @@ class AuthKeyboard extends PureComponent {
       this._saveLockoutData(lockoutUntil, this.pinLockoutCount);
     }
 
-    this.setState({
-      pinLockoutTime,
-    }, this._countdownTick);
+    this.setState(
+      {
+        pinLockoutTime,
+      },
+      this._countdownTick,
+    );
   };
 
   _validPin = (pin) => {
@@ -170,7 +165,7 @@ class AuthKeyboard extends PureComponent {
       setTimeout(() => {
         try {
           this.errorText.fadeOut(800);
-        } catch (err) { }
+        } catch (err) {}
       }, 1000);
     });
 
@@ -200,7 +195,7 @@ class AuthKeyboard extends PureComponent {
 
   _clear = () => {
     this._pinChange('');
-  }
+  };
 
   _openTouchId = () => {
     TouchID.isSupported().then((biometryType) => {
@@ -238,12 +233,13 @@ class AuthKeyboard extends PureComponent {
 
       return (
         <Animatable.Text
-          ref={c => this.errorText = c}
+          ref={c => (this.errorText = c)}
           useNativeDriver
           style={[themeStyle.message, themeStyle.errorMessage]}
         >
           {`${this.state.triesLeft} tries left`}
-        </Animatable.Text>);
+        </Animatable.Text>
+      );
     };
 
     const renderMessage = () => {
@@ -251,33 +247,26 @@ class AuthKeyboard extends PureComponent {
         return null;
       }
 
-      return (
-        <Text style={[themeStyle.message, themeStyle.infoMessage]}>
-          {props.infoMessage}
-        </Text>
-      );
+      return <Text style={[themeStyle.message, themeStyle.infoMessage]}>{props.infoMessage}</Text>;
     };
 
     // pinLockoutTime
 
     const renderInput = () => (
       <React.Fragment>
-        { renderMessage() }
+        {renderMessage()}
         <PinInput
           ref="pinInput"
           value={this.state.pin}
           style={[{ marginBottom: 8 }, props.infoMessage ? null : { marginTop: 8 }]}
-          pinStyle={[
-            themeStyle.pinStyle,
-            (pinLockoutTime ? themeStyle.disabledPinStyle : null),
-          ]}
+          pinStyle={[themeStyle.pinStyle, pinLockoutTime ? themeStyle.disabledPinStyle : null]}
           filledStyle={[
             themeStyle.filledStyle,
-            (this.state.indicateError ? themeStyle.errorFilledStyle : null),
+            this.state.indicateError ? themeStyle.errorFilledStyle : null,
           ]}
         />
 
-        { renderError() }
+        {renderError()}
       </React.Fragment>
     );
 
@@ -289,7 +278,7 @@ class AuthKeyboard extends PureComponent {
         onTouchId={this._onTouchId}
         pinLockoutTime={pinLockoutTime}
       >
-        { renderInput() }
+        {renderInput()}
       </PinKeyboard>
     );
   }

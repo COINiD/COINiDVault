@@ -172,6 +172,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_async-storage')
     compile project(':react-native-keep-awake')
     compile project(':react-native-camera')
     compile project(':react-native-splash-screen')
@@ -180,7 +181,6 @@ dependencies {
     compile project(':react-native-vector-icons')
     compile project(':react-native-svg')
     compile project(':react-native-randombytes')
-    compile project(':react-native-os')
     compile project(':react-native-keychain')
     compile project(':lottie-react-native')
     compile fileTree(include: ['*.jar'], dir: 'libs')
