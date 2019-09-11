@@ -41,6 +41,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -100,6 +114,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -153,6 +181,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -206,6 +248,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -262,6 +318,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -316,6 +386,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -402,6 +486,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -491,6 +589,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -601,6 +713,20 @@ Object {
     "pubKeyHash": 0,
     "qrScheme": "bitcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -649,6 +775,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -700,6 +840,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -745,6 +899,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -790,6 +958,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -838,6 +1020,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -884,6 +1080,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -954,6 +1164,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1035,6 +1259,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1137,6 +1375,20 @@ Object {
     "pubKeyHash": 36,
     "qrScheme": "groestlcoin",
     "scriptHash": 5,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1185,6 +1437,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1236,6 +1502,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1281,6 +1561,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1326,6 +1620,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1374,6 +1682,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1420,6 +1742,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1490,6 +1826,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1571,6 +1921,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1673,6 +2037,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "groestlcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -1697,6 +2075,7 @@ Object {
   "derivationPath": "m/49'/2'/0'/0/5",
   "message": "This is a test message",
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1706,16 +2085,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1729,9 +2100,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -1755,6 +2141,7 @@ Object {
     "m/49'/2'/0'",
   ],
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1764,16 +2151,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1787,9 +2166,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -1807,6 +2201,7 @@ Object {
     "m/44'/2'/0'",
   ],
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1816,16 +2211,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1839,9 +2226,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -1859,6 +2261,7 @@ Object {
     "m/84'/2'/0'",
   ],
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1868,16 +2271,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1891,9 +2286,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -1914,6 +2324,7 @@ Object {
   "derivationPath": "m/49'/2'/0'/0/5",
   "message": "unlock wallet 05ic9gZoNv2xCc6BbmzvWw==",
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1923,16 +2334,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1946,9 +2349,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -1967,6 +2385,7 @@ exports[`litecoin COINiDPrivate SWP generates correct return data 2`] = `"coinid
 exports[`litecoin COINiDPrivate SWP parses info correct 1`] = `
 Object {
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -1976,16 +2395,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -1999,9 +2410,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -2044,6 +2470,7 @@ Object {
     },
   ],
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -2053,16 +2480,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -2076,9 +2495,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -2132,6 +2566,7 @@ Object {
     430000,
   ],
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -2141,16 +2576,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -2164,9 +2591,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -2241,6 +2683,7 @@ exports[`litecoin COINiDPrivate VAL parses info correct 1`] = `
 Object {
   "derivationPath": "m/49'/0'/0'/0/2",
   "network": Object {
+    "allowBitcoinSlip132": true,
     "bech32": "ltc",
     "bip32": Object {
       "private": 27106558,
@@ -2250,16 +2693,8 @@ Object {
     "blockTime": 2.5,
     "bridgeParameterArr": Array [
       Array [
-        "insight",
-        "https://ltc-bitcore1.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore2.coinid.org/api",
-      ],
-      Array [
-        "insight",
-        "https://ltc-bitcore3.coinid.org/api",
+        "blockbook",
+        "wss://ltc1.trezor.io/",
       ],
     ],
     "confirmations": 6,
@@ -2273,9 +2708,24 @@ Object {
     "pubKeyHash": 48,
     "qrScheme": "litecoin",
     "scriptHash": 50,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 27106558,
+        "public": 27108450,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 28469138,
+        "public": 28471030,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
+      "P2WPKH",
     ],
     "ticker": "LTC",
     "title": "Litecoin",
@@ -2328,6 +2778,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2387,6 +2851,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2440,6 +2918,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2493,6 +2985,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2549,6 +3055,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2603,6 +3123,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2681,6 +3215,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2768,6 +3316,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2870,6 +3432,20 @@ Object {
     "pubKeyHash": 50,
     "qrScheme": "myriadcoin",
     "scriptHash": 9,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 76066276,
+        "public": 76067358,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 77428856,
+        "public": 77429938,
+      },
+      "P2WPKH": Object {
+        "private": 78791436,
+        "public": 78792518,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2926,6 +3502,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -2985,6 +3575,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3038,6 +3642,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3091,6 +3709,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3147,6 +3779,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3201,6 +3847,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3287,6 +3947,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3376,6 +4050,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
@@ -3486,6 +4174,20 @@ Object {
     "pubKeyHash": 111,
     "qrScheme": "bitcoin",
     "scriptHash": 196,
+    "slip132": Object {
+      "P2PKH": Object {
+        "private": 70615956,
+        "public": 70617039,
+      },
+      "P2SH-P2WPKH": Object {
+        "private": 71978536,
+        "public": 71979618,
+      },
+      "P2WPKH": Object {
+        "private": 73341116,
+        "public": 73342198,
+      },
+    },
     "supportedAddressTypes": Array [
       "P2SH-P2WPKH",
       "P2PKH",
