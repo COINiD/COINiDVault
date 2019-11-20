@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>158</string>
+	<string>160</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
@@ -76,6 +76,8 @@
 	<string>For Permissions</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>For Permissions</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>For transferring data to wallet when using BLE transport</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Entypo.ttf</string>
