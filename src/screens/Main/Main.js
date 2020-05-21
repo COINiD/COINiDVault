@@ -20,8 +20,6 @@ import { validateCoinIdDataFromUrl, getInfoFromCoinIdUrl } from '../../utils/coi
 
 import { p2pClient } from '../../utils/p2p-ble-peripheral';
 
-import { getSweepedKeysFromStore } from '../../utils/sweepkey';
-
 const lottieFiles = {
   logo: require('../../animations/logo.json'),
 };
@@ -48,16 +46,6 @@ class Screen extends Component {
     Linking.getInitialURL().then(url => this._handleOpenURL(url));
 
     AppState.addEventListener('change', this._handleAppStateChange);
-
-    getSweepedKeysFromStore().then((storedKeys) => {
-      console.log({ storedKeys });
-    });
-
-    /*
-    blePeripheral.isSupported().then((isBLESupported) => {
-      this.setState({isBLESupported});
-    });
-    */
   }
 
   componentWillUnmount() {
@@ -76,12 +64,9 @@ class Screen extends Component {
   };
 
   _handleOpenURL = (url) => {
-    console.log({ url });
-
     if (url) {
       this._handleOpenURLPromise(url)
         .then((returnUrl) => {
-          console.log({ returnUrl });
           if (returnUrl !== null) {
             Linking.openURL(returnUrl);
           }
