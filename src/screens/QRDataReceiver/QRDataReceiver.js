@@ -15,7 +15,12 @@ class QRDataReceiver extends PureComponent {
 
   _dataReceived = (data) => {
     const { navigation: { state: { params: { onComplete } } } } = this.props;
-    onComplete(data);
+
+    // timeout to allow dialog to be removed
+    setTimeout(() => {
+      onComplete(data);
+    }, 1500);
+
     this._goBack();
   };
 
