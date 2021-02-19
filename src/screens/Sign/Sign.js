@@ -17,8 +17,12 @@ import { getCoinIdDataFromUrl } from '../../utils/coinid';
 import { numFormat } from '../../utils/numFormat';
 import createStyleArr from '../../utils/createStyleArr';
 import { findSweepedKeyInStore } from '../../utils/sweepkey';
+import { CustomOverlayContext } from '../../contexts/CustomOverlayContext';
+import ValidatedAddress from '../../dialogs/ValidatedAddress';
 
 class Screen extends Component {
+  static contextType = CustomOverlayContext;
+
   themeStyle = '';
 
   theme = '';
@@ -210,7 +214,7 @@ class Screen extends Component {
             let returnUrl = coinId.buildReturnUrl({ data, returnScheme, variant });
 
             if (type === 'val') {
-              Alert.alert('Validated address', data);
+              this.context.show(<ValidatedAddress onClosed={this.context.hide} address={data} />);
               returnUrl = null; // do not send anything back if validate address
             }
 
