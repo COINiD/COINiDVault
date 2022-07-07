@@ -23,7 +23,7 @@
     "events": "^1.1.1",
     "lottie-react-native": "https://github.com/COINiD/lottie-react-native#feature/android-2.5.6",
     "mem": "^4.0.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "numbro": "^2.1.0",
     "react": "16.8.3",
     "react-native": "0.59.9",
