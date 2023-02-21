@@ -133,8 +133,8 @@ android {
         applicationId "org.coinid.vault"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 103
-        versionName "1.5.5"
+        versionCode 105
+        versionName "1.5.6"
         renderscriptTargetApi 23
         renderscriptSupportModeEnabled true
     }

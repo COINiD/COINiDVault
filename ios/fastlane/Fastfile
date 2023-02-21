@@ -12,26 +12,33 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new beta build to TestFlight"
+  desc 'Push a new beta build to TestFlight'
 
   lane :bump do
-    increment_build_number(xcodeproj: "COINiD.xcodeproj")
+    increment_build_number(xcodeproj: 'COINiD.xcodeproj')
   end
 
   lane :beta do
-    increment_build_number(xcodeproj: "COINiD.xcodeproj")
+    increment_build_number(xcodeproj: 'COINiD.xcodeproj')
 
+    shRootDir = '../..'
+
+    sh("rm -rf #{shRootDir}/ios/main.jsbundle")
+    sh("rm -rf #{shRootDir}/ios/assets")
+
+    sh("cd #{shRootDir}; node ./node_modules/react-native/cli.js bundle --entry-file index.js --platform ios --dev false --reset-cache --bundle-output './ios/main.jsbundle' --assets-dest './ios'")
+   
     build_app(
-      scheme: 'COINiD',
-      xcargs: '-allowProvisioningUpdates'
+     scheme: 'COINiD',
+     xcargs: '-allowProvisioningUpdates'
     )
-
+   
     upload_to_testflight(skip_waiting_for_build_processing: true)
-
+   
     slack(
-      message: "New Vault coming to Testflight!",
-      default_payloads: [],
-      slack_url: ENV['SLACK_URL']
+     message: 'New Vault coming to Testflight!',
+     default_payloads: [],
+     slack_url: ENV['SLACK_URL']
     )
   end
 end
